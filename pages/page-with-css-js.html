@@ -4,24 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/page-with-css.css" />
     <title>Knowledge base</title>
   </head>
   <body>
     <header>
-      <img src="assets/Avatar (md).png" alt="Dimterion's logo" />
-      <h1>This is a page made only with HTML</h1>
-      <h2>It uses semantic elements and no CSS or JavaScript</h2>
+      <img src="../assets/Avatar (md).png" alt="Dimterion's logo" />
+      <h1>This is a page made with HTML, CSS and JS</h1>
+      <h2>
+        It uses semantic elements, CSS and JavaScript (to hover over the
+        navigation elements)
+      </h2>
     </header>
     <nav>
       <h3>Navigation to other pages:</h3>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="./pages/page-with-css.html">Page with CSS</a></li>
-        <li>
-          <a href="./pages/page-with-css-js.html"
-            >Page with CSS and JavaScript</a
-          >
+        <li id="linkHome"><a href="../index.html">Home</a></li>
+        <li id="linkCss">
+          <a href="../pages/page-with-css.html">Page with CSS</a>
         </li>
+        <li id="linkJs"><a href="#">Page with CSS and JavaScript</a></li>
       </ul>
     </nav>
     <section>
@@ -52,5 +54,6 @@
         <a href="https://github.com/Dimterion">here</a>
       </h6>
     </footer>
+    <script src="../scripts/page-with-js.js"></script>
   </body>
 </html>
