@@ -1,0 +1,75 @@
+.hair-container {
+  width: 200px;
+  height: 50px;
+  background-color: #d4a373;
+  margin: auto;
+  position: relative;
+  top: 150px;
+  border-radius: 50px 0 50px 0;
+}
+
+.head-container {
+  background-color: #f5ebe0;
+  width: 280px;
+  height: 325px;
+  border-radius: 55% 55% 70% 70%;
+  margin: 100px auto;
+}
+
+.eyes-container {
+  display: flex;
+  justify-content: center;
+}
+
+.right-eye {
+  width: 250px;
+  height: 70px;
+  background-color: #a9d6e5;
+  margin: 100px 0;
+  border: 10px solid #000;
+  border-radius: 5px;
+}
+
+.left-eye {
+  width: 250px;
+  height: 70px;
+  background-color: #a9d6e5;
+  margin: 100px 0;
+  border: 10px solid #000;
+  border-radius: 5px;
+}
+
+.glasses-line {
+  width: 150px;
+  height: 10px;
+  background-color: #000;
+  margin: 130px 0;
+}
+
+.nose-container {
+  width: 5px;
+  height: 20px;
+  background-color: #000;
+  position: relative;
+  top: -110px;
+  left: 136px;
+  border-radius: 5px;
+}
+
+.mouth-container {
+  width: 70px;
+  height: 10px;
+  background-color: #000;
+  margin: auto;
+  position: relative;
+  top: -35px;
+  border-radius: 5px;
+}
+
+.beard-container {
+  width: 100px;
+  height: 90px;
+  background-color: #d4a373;
+  margin: -60px auto;
+  border-radius: 15px 15px 45px 45px;
+}
