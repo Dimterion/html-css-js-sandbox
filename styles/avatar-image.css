@@ -62,7 +62,7 @@
   background-color: #000;
   margin: auto;
   position: relative;
-  top: -35px;
+  top: -55px;
   border-radius: 5px;
 }
 
@@ -70,6 +70,6 @@
   width: 100px;
   height: 90px;
   background-color: #d4a373;
-  margin: -60px auto;
+  margin: -80px auto;
   border-radius: 15px 15px 45px 45px;
 }
