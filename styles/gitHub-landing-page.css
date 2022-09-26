@@ -1,3 +1,5 @@
+/* Navigation bar */
+
 *,
 :before,
 :after {
@@ -10,11 +12,12 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
+.page-section {
   font-family: sans-serif;
   height: 100vh;
   display: flex;
-  justify-content: flex-end;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -80,6 +83,23 @@ aside {
   }
 
   aside {
-    left: 1em;
+    left: 0;
+    top: 0;
+    padding: 0;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bar {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu li a {
+    margin: 5px;
   }
 }

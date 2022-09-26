@@ -1,3 +1,4 @@
+// Navigation bar
 let bar = document.querySelector(".bar");
 
 document.onscroll = () => {
@@ -20,4 +21,18 @@ function activateLink(link) {
   previous.classList.remove("active");
   current.classList.add("active");
   previous = current;
+}
+
+// Color scheme
+let toggle = true;
+let colorScheme = document.getElementsByName("color-scheme")[0];
+
+function changeColorScheme() {
+  if (toggle) {
+    colorScheme.setAttribute("content", "light");
+    toggle = !toggle;
+  } else {
+    colorScheme.setAttribute("content", "dark");
+    toggle = !toggle;
+  }
 }
