@@ -1,4 +1,4 @@
-// Navigation bar
+// Navigation bar scrolling
 let bar = document.querySelector(".bar");
 
 document.onscroll = () => {
@@ -23,16 +23,16 @@ function activateLink(link) {
   previous = current;
 }
 
-// Color scheme
-let toggle = true;
-let colorScheme = document.getElementsByName("color-scheme")[0];
+// Color scheme changing
+const colorScheme = document.getElementsByName("color-scheme")[0];
+const colorSchemeBtn = document.getElementById("colorScheme-btn");
 
 function changeColorScheme() {
-  if (toggle) {
+  if (colorScheme.getAttribute("content") === "dark") {
     colorScheme.setAttribute("content", "light");
-    toggle = !toggle;
+    colorSchemeBtn.textContent = "Switch to dark mode";
   } else {
     colorScheme.setAttribute("content", "dark");
-    toggle = !toggle;
+    colorSchemeBtn.textContent = "Switch to light mode";
   }
 }

@@ -26,13 +26,14 @@ h2 {
   margin-right: 3em;
 }
 
-aside {
+.navBar {
   display: flex;
   position: fixed;
   padding-left: 1.25em;
   left: 5em;
   top: 50%;
   transform: translateY(-50%);
+  background-color: #fff;
 }
 
 .bar {
@@ -82,7 +83,7 @@ aside {
     margin-right: 1em;
   }
 
-  aside {
+  .navBar {
     left: 0;
     top: 0;
     padding: 0;
@@ -101,5 +102,13 @@ aside {
 
   .menu li a {
     margin: 5px;
+  }
+}
+
+/* Header */
+
+@media (max-width: 424px) {
+  header {
+    margin-top: 30px;
   }
 }
