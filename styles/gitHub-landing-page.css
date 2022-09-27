@@ -1,5 +1,4 @@
 /* Navigation bar */
-
 *,
 :before,
 :after {
@@ -22,7 +21,7 @@ html {
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 2rem;
   margin-right: 3em;
 }
 
@@ -52,7 +51,7 @@ h2 {
   width: 0.65em;
   height: 0.65em;
   border-radius: 50%;
-  background-color: #000;
+  background-color: red;
   left: -0.16em;
   top: 92%;
 }
@@ -69,6 +68,12 @@ h2 {
   font-weight: 700;
   text-decoration: none;
   transition: color 300ms ease-in, margin-left 300ms ease-in;
+}
+
+.menu li a:hover {
+  color: red;
+  margin-left: 5px;
+  transition: 0.7s;
 }
 
 .menu li a.active {
@@ -107,9 +112,16 @@ h2 {
 
 /* Header */
 header {
+  font-family: sans-serif;
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #colorScheme-btn {
@@ -118,10 +130,45 @@ header {
   border-radius: 50%;
   border: 1px solid;
   cursor: pointer;
+  transition: 0.7s;
+}
+
+#colorScheme-btn:hover {
+  color: orange;
+  transition: 0.7s;
 }
 
 @media (max-width: 424px) {
   #colorScheme-btn {
     padding: 0 7px;
+  }
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  font-size: 2rem;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  background-color: #333;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 3rem;
+  color: gainsboro;
+  transition: 0.7s;
+}
+
+footer a:hover {
+  color: red;
+  transition: 1s;
+}
+
+@media (max-width: 424px) {
+  footer a {
+    margin: 0 1rem;
   }
 }
