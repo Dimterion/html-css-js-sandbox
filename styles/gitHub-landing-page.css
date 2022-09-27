@@ -33,7 +33,6 @@ h2 {
   left: 5em;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #fff;
 }
 
 .bar {
@@ -90,6 +89,7 @@ h2 {
     transform: none;
     width: 100%;
     justify-content: center;
+    background-color: gainsboro;
   }
 
   .bar {
@@ -106,9 +106,22 @@ h2 {
 }
 
 /* Header */
+header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#colorScheme-btn {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 1px solid;
+  cursor: pointer;
+}
 
 @media (max-width: 424px) {
-  header {
-    margin-top: 30px;
+  #colorScheme-btn {
+    padding: 0 7px;
   }
 }

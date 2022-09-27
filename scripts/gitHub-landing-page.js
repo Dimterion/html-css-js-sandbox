@@ -30,9 +30,7 @@ const colorSchemeBtn = document.getElementById("colorScheme-btn");
 function changeColorScheme() {
   if (colorScheme.getAttribute("content") === "dark") {
     colorScheme.setAttribute("content", "light");
-    colorSchemeBtn.textContent = "Switch to dark mode";
   } else {
     colorScheme.setAttribute("content", "dark");
-    colorSchemeBtn.textContent = "Switch to light mode";
   }
 }
