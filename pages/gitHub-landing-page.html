@@ -6,6 +6,8 @@
 
   - Color scheme: https://twitter.com/madzadev/status/1566793478423601153 + https://twitter.com/MarcusAsplund/status/1566897039279099904
 
+  - Header animation: https://twitter.com/RitikaAgrawal08/status/1571808297593999360
+
 -->
 
 <!DOCTYPE html>
@@ -23,13 +25,17 @@
     <title>Dimterion's GitHub Profile</title>
   </head>
   <body>
-    <header>
+    <header class="profileHeader">
       <a href="/pages/gitHub-landing-page.html"
         ><h1>Dimterion's GitHub Profile</h1></a
       >
       <button id="colorScheme-btn" onclick="changeColorScheme()">
         <i class="fa-solid fa-lightbulb"></i>
       </button>
+      <span class="top"></span>
+      <span class="right"></span>
+      <span class="bottom"></span>
+      <span class="left"></span>
     </header>
     <aside class="navBar">
       <div class="bar"></div>
@@ -57,6 +63,7 @@
     </main>
     <footer>
       <a
+        id="gitHub-icon"
         href="https://github.com/Dimterion"
         target="_blank"
         rel="noopener noreferrer"
@@ -64,6 +71,7 @@
         <i class="fa-brands fa-github"></i>
       </a>
       <a
+        id="twitter-icon"
         href="https://twitter.com/Dimterion"
         target="_blank"
         rel="noopener noreferrer"
@@ -71,6 +79,7 @@
         <i class="fa-brands fa-twitter"></i>
       </a>
       <a
+        id="medium-icon"
         href="https://medium.com/@dimterion"
         target="_blank"
         rel="noopener noreferrer"
