@@ -9,20 +9,34 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 2em;
+}
+
+.hero-img {
+  width: 80vw;
+  height: 300px;
+  display: block;
+  margin: 1rem auto;
+  object-fit: cover;
+  border-radius: 3px;
 }
 
 .page-section {
-  font-family: sans-serif;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
+}
+
+.page-section > * {
+  text-align: center;
+  margin: 1rem;
 }
 
 h2 {
   font-size: 2rem;
-  margin-right: 3em;
 }
 
 .navBar {
@@ -30,7 +44,7 @@ h2 {
   position: fixed;
   padding-left: 1.25em;
   left: 5em;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
 }
 
@@ -58,7 +72,6 @@ h2 {
 
 .menu {
   list-style-type: none;
-  font-family: sans-serif;
   line-height: 1.5;
 }
 
@@ -81,7 +94,7 @@ h2 {
   margin-left: 5px;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 800px) {
   h2 {
     font-size: 1.5rem;
     margin-right: 1em;
@@ -113,7 +126,6 @@ h2 {
 /* Header */
 .profileHeader {
   position: relative;
-  font-family: sans-serif;
   padding: 0.5em;
   display: flex;
   justify-content: space-around;
@@ -148,6 +160,12 @@ h2 {
 }
 
 span {
+  /* TEMP - TO BE REMOVED */
+
+  display: none;
+
+  /* TEMP - TO BE REMOVED */
+
   position: absolute;
   border-radius: 100vmax;
 }
@@ -270,7 +288,7 @@ span {
   }
 }
 
-@media (max-width: 424px) {
+@media (max-width: 800px) {
   .profileHeader {
     margin-top: 25px;
   }
@@ -324,7 +342,7 @@ footer a {
   transition: 1s;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 800px) {
   footer a {
     margin: 0 1rem;
   }
