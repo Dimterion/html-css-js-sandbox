@@ -15,7 +15,7 @@ html {
 }
 
 .hero-img {
-  width: 80vw;
+  width: 55vw;
   height: 300px;
   display: block;
   margin: 1rem auto;
@@ -28,6 +28,7 @@ html {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
 }
 
 .page-section > * {
@@ -97,7 +98,6 @@ h2 {
 @media (max-width: 800px) {
   h2 {
     font-size: 1.5rem;
-    margin-right: 1em;
   }
 
   .navBar {
@@ -160,12 +160,6 @@ h2 {
 }
 
 span {
-  /* TEMP - TO BE REMOVED */
-
-  display: none;
-
-  /* TEMP - TO BE REMOVED */
-
   position: absolute;
   border-radius: 100vmax;
 }
