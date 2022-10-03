@@ -9,16 +9,15 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "Arial Narrow Bold", sans-serif;
+  font-family: "Inter Tight", sans-serif;
   letter-spacing: 0.5px;
   line-height: 2em;
 }
 
 .hero-img {
-  width: 55vw;
-  height: 300px;
+  width: 50vw;
+  height: 400px;
   display: block;
-  margin: 1rem auto;
   object-fit: cover;
   border-radius: 3px;
 }
@@ -36,6 +35,17 @@ html {
   margin: 1rem;
 }
 
+.link {
+  color: red;
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.link:hover {
+  color: #696969;
+  transition: 0.7s;
+}
+
 h2 {
   font-size: 2rem;
 }
@@ -44,7 +54,7 @@ h2 {
   display: flex;
   position: fixed;
   padding-left: 1.25em;
-  left: 5em;
+  left: 2em;
   top: 55%;
   transform: translateY(-50%);
 }
@@ -96,6 +106,11 @@ h2 {
 }
 
 @media (max-width: 800px) {
+  .hero-img {
+    width: 90vw;
+    height: 40vh;
+  }
+
   h2 {
     font-size: 1.5rem;
   }

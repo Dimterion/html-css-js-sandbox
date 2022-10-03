@@ -16,6 +16,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GitHub profile landing page of Dimterion, Web Developer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="color-scheme" content="dark" />
     <link rel="stylesheet" href="../styles/gitHub-landing-page.css" />
     <script
@@ -27,7 +37,11 @@
   <body>
     <header class="profileHeader">
       <a href="#"><h1>Dimterion's GitHub Profile</h1></a>
-      <button id="colorScheme-btn" onclick="changeColorScheme()">
+      <button
+        id="colorScheme-btn"
+        aria-label="Change color scheme"
+        onclick="changeColorScheme()"
+      >
         <i class="fa-solid fa-lightbulb"></i>
       </button>
       <span class="top"></span>
@@ -51,18 +65,21 @@
           src="../assets/img-lake.jpg"
           alt="Lake and trees"
         />
-        <h2>Hi! I'm Dmitrii</h2>
-        <h3>
-          <i
-            >I'm interested in Web Development<br />(Front-End with a bit of
-            Back-end)</i
-          >
-        </h3>
-        <h4>This is my GitHub profile landing page</h4>
-        <p>
-          Here you can see the projects I worked on,<br />studies that I've
-          completed and my contact information
-        </p>
+        <div>
+          <h2>Hi! I'm Dmitrii</h2>
+          <h3>
+            <i
+              >I'm interested in Web Development<br />(Front-End with a bit of
+              Back-end)</i
+            >
+          </h3>
+          <br />
+          <h4>This is my GitHub profile landing page</h4>
+          <p>
+            Here you can see the projects I worked on,<br />studies that I've
+            completed and my contact information
+          </p>
+        </div>
       </section>
       <section id="projects" class="page-section">
         <img
@@ -74,6 +91,7 @@
         <p>
           You can check
           <a
+            class="link"
             href="https://portfolio-site-dimterion.vercel.app/projects"
             target="_blank"
             rel="noopener noreferrer"
@@ -84,6 +102,7 @@
         <p>
           Or take a look at my
           <a
+            class="link"
             href="https://github.com/Dimterion"
             target="_blank"
             rel="noopener noreferrer"
@@ -101,6 +120,7 @@
         <p>
           I've finished the Front-End Developer course on the<br />
           <a
+            class="link"
             href="https://openclassrooms.com/paths/517-javascript-react-developer"
             target="_blank"
             rel="noopener noreferrer"
@@ -110,6 +130,7 @@
         <p>
           I've also completed<br />
           <a
+            class="link"
             href="https://www.udemy.com/course/react-front-to-back-2022/"
             target="_blank"
             rel="noopener noreferrer"
@@ -128,6 +149,7 @@
         <p>
           I'm currently present on
           <a
+            class="link"
             href="https://twitter.com/Dimterion"
             target="_blank"
             rel="noopener noreferrer"
@@ -137,6 +159,7 @@
         <p>
           And I also write on
           <a
+            class="link"
             href="https://medium.com/@dimterion"
             target="_blank"
             rel="noopener noreferrer"
@@ -150,6 +173,7 @@
       <a
         id="gitHub-icon"
         href="https://github.com/Dimterion"
+        aria-label="GitHub profile link"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -158,6 +182,7 @@
       <a
         id="twitter-icon"
         href="https://twitter.com/Dimterion"
+        aria-label="Twitter profile link"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -166,6 +191,7 @@
       <a
         id="medium-icon"
         href="https://medium.com/@dimterion"
+        aria-label="Medium profile link"
         target="_blank"
         rel="noopener noreferrer"
       >
