@@ -29,6 +29,7 @@ nav {
   align-items: baseline;
   justify-content: center;
   border: 5px solid #1b1b1e;
+  border-radius: 5px;
 }
 
 ul {
@@ -37,7 +38,6 @@ ul {
 }
 
 li {
-  list-style: none;
   margin: 0 1vw;
 }
 
@@ -48,4 +48,77 @@ a {
 
 a:hover {
   color: #d8dbe2;
+}
+
+section {
+  padding: 1vw;
+  margin: 1vw;
+  font-size: 1.25rem;
+  border-radius: 5px;
+}
+
+.middle-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #373f51;
+}
+
+.middle-container * {
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+aside {
+  padding: 10vh 1vw;
+  max-width: 30vw;
+}
+
+article {
+  padding: 1vw;
+  max-width: 40vw;
+}
+
+summary {
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  background-color: #373f51;
+}
+
+footer h6 {
+  padding: 1vw;
+  width: 30vw;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 5vh auto;
+}
+
+@media (max-width: 800px) {
+  body * {
+    margin: 1vh 0;
+  }
+
+  img {
+    margin: auto;
+  }
+
+  .middle-container {
+    flex-flow: column wrap;
+  }
+
+  aside {
+    max-width: 95vw;
+  }
+
+  article {
+    max-width: 95vw;
+  }
+
+  footer h6 {
+    width: 95vw;
+  }
 }
