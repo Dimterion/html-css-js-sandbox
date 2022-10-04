@@ -1,69 +1,13 @@
-const linkHome = document.getElementById("linkHome");
+// Color scheme changing
+const isDarkScheme =
+  window.matchMedia && window.matchMedia("(prefers-color-scheme: dark").matches;
 
-linkHome.addEventListener(
-  "mouseover",
-  (event) => {
-    event.target.style.color = "green";
+const colorSchemeStatus = document.getElementById("color-scheme-status");
 
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false
-);
-
-const linkCss = document.getElementById("linkCss");
-
-linkCss.addEventListener(
-  "mouseover",
-  (event) => {
-    event.target.style.color = "blue";
-
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false
-);
-
-const linkJs = document.getElementById("linkJs");
-
-linkJs.addEventListener(
-  "mouseover",
-  (event) => {
-    event.target.style.color = "red";
-
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false
-);
-
-const linkAvatar = document.getElementById("linkAvatar");
-
-linkAvatar.addEventListener(
-  "mouseover",
-  (event) => {
-    event.target.style.color = "purple";
-
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false
-);
-
-const linkBackground = document.getElementById("linkBackground");
-
-linkBackground.addEventListener(
-  "mouseover",
-  (event) => {
-    event.target.style.color = "orange";
-
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false
-);
+if (isDarkScheme) {
+  colorSchemeStatus.innerText =
+    "The page is displayed in dark mode based on your system preferences";
+} else {
+  colorSchemeStatus.innerText =
+    "The page is displayed in light mode based on your system preferences";
+}

@@ -1,5 +1,24 @@
+/* Color scheme */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #373f51;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #d8dbe2;
+  }
+}
+
+#color-scheme-status {
+  padding: 10px;
+}
+
+/* Main styling */
+
 body {
-  background-color: #373f51;
   color: #1b1b1e;
   margin: 0;
 }
