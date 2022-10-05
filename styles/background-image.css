@@ -1,3 +1,16 @@
+/* Page styling */
+body {
+  background: #669bbc;
+  margin: 0;
+}
+
+header {
+  border-bottom: 1px solid #000;
+  margin-bottom: 2vh;
+  padding: 2vw;
+}
+
+/* Background image styling */
 body {
   font-family: "Passion One", cursive;
 }

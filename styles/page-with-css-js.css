@@ -1,5 +1,4 @@
 /* Color scheme */
-
 @media (prefers-color-scheme: dark) {
   body {
     background: #373f51;
@@ -24,7 +23,6 @@
 }
 
 /* Main styling */
-
 body {
   color: #1b1b1e;
   margin: 0;
