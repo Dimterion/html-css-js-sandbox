@@ -16,6 +16,13 @@
   padding: 10px;
 }
 
+/* Font change button */
+#fontChange-btn {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 /* Main styling */
 
 body {
@@ -31,7 +38,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   border-radius: 0;
   padding: 1vw;
@@ -54,6 +61,7 @@ nav {
 ul {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 li {
@@ -123,6 +131,14 @@ footer h6 {
 
   img {
     margin: auto;
+  }
+
+  ul {
+    justify-content: flex-start;
+  }
+
+  li {
+    margin: 0 4vw;
   }
 
   .middle-container {
