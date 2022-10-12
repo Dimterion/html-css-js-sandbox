@@ -1,0 +1,75 @@
+main {
+  margin-top: 15vh;
+}
+
+p {
+  position: absolute;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 900;
+  animation: changeColor 2s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+
+p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  top: 100%;
+  animation: moveUpDown 2s ease-in-out 1;
+}
+
+p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  animation: moveUp 0.8s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes changeColor {
+  0% {
+    color: #000;
+  }
+
+  40%,
+  60% {
+    color: #ff0000;
+  }
+
+  100% {
+    color: #000;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    top: 100%;
+  }
+
+  40%,
+  60% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
