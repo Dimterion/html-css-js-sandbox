@@ -8,7 +8,7 @@ p {
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 900;
-  animation: changeColor 2s ease-in-out 1;
+  animation: changeColor 2s ease-in-out infinite;
   animation-fill-mode: forwards;
 }
 
@@ -19,7 +19,7 @@ p::before {
   height: 3px;
   background-color: #000;
   top: 100%;
-  animation: moveUpDown 2s ease-in-out 1;
+  animation: moveUpDown 2s ease-in-out infinite;
 }
 
 p::after {
