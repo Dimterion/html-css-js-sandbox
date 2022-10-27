@@ -124,3 +124,44 @@ body {
   font-size: 2rem;
   border-radius: 40px;
 }
+
+/* Transparent cards styling */
+.transparentCards-container {
+  background-image: url(../assets/img_hill.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.transparentCard {
+  position: relative;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+  height: 30vh;
+  width: 200px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transparentCard:hover {
+  border: 1px solid white;
+}
+
+.transparentCard-text {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
