@@ -1,0 +1,193 @@
+main {
+  margin-top: 20px;
+}
+
+/* Text reveal */
+
+.textReveal {
+  position: absolute;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 900;
+  animation: changeColor 2s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  margin: 20px 0;
+}
+
+.textReveal::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  top: 100%;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.textReveal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  animation: moveUp 0.8s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes changeColor {
+  0% {
+    color: #000;
+  }
+
+  40%,
+  60% {
+    color: #ff0000;
+  }
+
+  100% {
+    color: #000;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    top: 100%;
+  }
+
+  40%,
+  60% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+/* Text loop */
+
+.loop-container {
+  margin-top: 125px;
+}
+
+.textLoop-container {
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: sans-serif;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.textLoop-container p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: textLoop 7s infinite linear;
+}
+
+@keyframes textLoop {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (max-width: 762px) {
+  .textLoop-container {
+    width: 90vw;
+  }
+}
+
+/* Countdown */
+
+.countdown-container {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  background-image: linear-gradient(to right, transparent 50%, #9bbfe0 50%);
+}
+
+.count {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.zoomOut {
+  animation: zoomOut 500ms linear 1;
+}
+
+@keyframes zoomOut {
+  0% {
+    font-size: 10rem;
+  }
+
+  100% {
+    font-size: 5rem;
+  }
+}
+
+.upper-piece {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0/50%;
+  background-color: #fff;
+  transform-origin: left;
+}
+
+.roll {
+  animation: rotateDown 500ms linear 1, rotateUp 500ms linear 500ms 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateDown {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+@keyframes rotateUp {
+  0% {
+    transform: rotate(0turn);
+    background-color: #9bbfe0;
+  }
+
+  100% {
+    transform: rotate(0.5turn);
+    background-color: #9bbfe0;
+  }
+}
