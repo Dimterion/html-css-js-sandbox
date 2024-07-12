@@ -2,108 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dimterion's code sandbox</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Sandbox</title>
   </head>
   <body>
-    <header>
-      <img src="assets/Avatar (md).png" alt="Dimterion's logo" />
-      <h1>This is a page made purely with HTML</h1>
-      <h2>It uses semantic elements and no CSS or JavaScript</h2>
+    <header class="header">
+      <h1>Sandbox</h1>
+      <nav>
+        Scroll to:
+        <a href="#section1" class="link bg-red">1</a>
+        <a href="#section2" class="link bg-blue">2</a>
+        <a href="#section3" class="link bg-green">3</a>
+        <a href="#section4" class="link bg-red">4</a>
+        <a href="#section5" class="link bg-blue">5</a>
+      </nav>
     </header>
-    <nav>
-      <h3>Navigation to other pages</h3>
-      <ul>
-        <li>
-          <a href="./pages/page-with-css.html">Page made with HTML & CSS</a>
-        </li>
-        <li>
-          <a href="./pages/page-with-css-js.html"
-            >Page made with HTML & CSS & JavaScript</a
-          >
-        </li>
-        <li>
-          <a href="./pages/avatar-image.html">Page with a CSS-made avatar</a>
-        </li>
-        <li>
-          <a href="./pages/background-image.html"
-            >Page with a CSS-made background image</a
-          >
-        </li>
-        <li>
-          <a href="./pages/gitHub-landing-page.html">GitHub landing page</a>
-        </li>
-        <li>
-          <a href="./pages/animations.html">Page with various animations</a>
-        </li>
-      </ul>
-    </nav>
-    <section>
-      <h4>A few "About" words</h4>
-      <p>
-        I mostly focus on learning
-        <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"
-          >React</a
-        >
-        now, but sometimes I just want to make something straightforward and
-        check how far it can go, hence this basic app creation.
-      </p>
-    </section>
-    <aside>
-      Here is a link to my
-      <a
-        href="https://twitter.com/Dimterion"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Twitter page</a
-      ><br /><br />
-      And here is a link to my
-      <a
-        href="https://github.com/Dimterion"
-        target="_blank"
-        rel="noopener noreferrer"
-        >GitHub profile</a
-      >
-    </aside>
-    <article>
-      <h5>Why making this page?</h5>
-      <ol>
-        <li>
-          This is my sandbox place where I test some things and see how they
-          work.
-        </li>
-        <li>
-          I just wanted to create a simple app with a few pages showing how it
-          can be transformed from pure <i>HTML</i> to <i>HTML</i> +
-          <i>CSS</i> and then to <i>HTML</i> + <i>CSS</i> + <i>JS</i>.
-        </li>
-        <li>Sometimes I can just do something for fun.</li>
-      </ol>
-      <details>
-        <summary>You can check my articles if you want (click here)</summary>
-        <ul>
-          <li>
-            <a
-              href="https://medium.com/@dimterion"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Here is a link to Medium</a
-            >
-          </li>
-        </ul>
-      </details>
-    </article>
-    <footer>
-      <h6>
-        The repository for this app can be found
-        <a
-          href="https://github.com/Dimterion/Basic-html-css-js-app"
-          target="_blank"
-          rel="noopener noreferrer"
-          >here</a
-        >
-      </h6>
-    </footer>
+    <main class="main">
+      <section id="section1" class="section">Content 1</section>
+      <section id="section2" class="section bg-blue">Content 2</section>
+      <section id="section3" class="section bg-green">Content 3</section>
+      <section id="section4" class="section">Content 4</section>
+      <section id="section5" class="section bg-blue">Content 5</section>
+    </main>
   </body>
 </html>
