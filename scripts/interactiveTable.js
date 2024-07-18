@@ -7,6 +7,7 @@ const projects = [
     },
     type: "demo",
     projectDate: "2024-06-04T12:00:00",
+    link: "https://github.com/Dimterion",
   },
   {
     project: {
@@ -16,6 +17,7 @@ const projects = [
     },
     type: "demo",
     projectDate: "2024-07-04T12:00:00",
+    link: "https://github.com/Dimterion",
   },
   {
     project: {
@@ -25,6 +27,7 @@ const projects = [
     },
     type: "demo",
     projectDate: "2024-07-04T12:00:00",
+    link: "https://github.com/Dimterion",
   },
 
   {
@@ -35,6 +38,7 @@ const projects = [
     },
     type: "repo",
     projectDate: "2024-06-05T10:00:00",
+    link: "https://github.com/Dimterion",
   },
   {
     project: {
@@ -44,6 +48,7 @@ const projects = [
     },
     type: "",
     projectDate: "2024-07-04T12:00:00",
+    link: "https://github.com/Dimterion",
   },
   {
     project: {
@@ -53,6 +58,7 @@ const projects = [
     },
     type: "",
     projectDate: "2024-07-03T11:00:00",
+    link: "https://github.com/Dimterion",
   },
 
   {
@@ -63,6 +69,7 @@ const projects = [
     },
     type: "",
     projectDate: "2024-07-04T12:00:00",
+    link: "https://github.com/Dimterion",
   },
   {
     project: {
@@ -72,6 +79,7 @@ const projects = [
     },
     type: "",
     projectDate: "2024-07-12T12:00:00",
+    link: "https://github.com/Dimterion",
   },
 ];
 
@@ -104,9 +112,12 @@ const mappedRecords = projects
                   </span>
               </td>
               <td>
-                  <div class='project-type project-type--${project.type}'>
+                  <a href=${project.link} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class='project-type project-type--${project.type}'>
                       ${project.type.toUpperCase()}
-                  </div>
+                  </a>
               </td>
               <td>
                   ${new Date(project.projectDate).toLocaleDateString("en-us", {
