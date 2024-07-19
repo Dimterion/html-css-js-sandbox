@@ -12,8 +12,10 @@ body {
 
 section {
   display: flex;
+  align-items: center;
   gap: 1.25rem;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   width: 400px;
   height: 400px;
   scroll-snap-type: x proximity;
