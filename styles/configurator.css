@@ -8,3 +8,15 @@
 .btn-selected:hover {
   transform: scale(1) !important;
 }
+
+#top-bar {
+  transition: transform 0.5s ease-in-out;
+}
+
+.visible-bar {
+  transform: translateY(0);
+}
+
+.hidden-bar {
+  transform: translateY(-100%);
+}
