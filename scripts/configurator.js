@@ -4,6 +4,29 @@ const interiorColorSection = document.querySelector("#interior-buttons");
 const exteriorImage = document.querySelector("exterior-image");
 const interiorImage = document.querySelector("interior-image");
 
+// Turn on/off top bar on scroll
+const handleScroll = () => {
+  const atTop = window.scrollY === 0;
+
+  topBar.classList.toggle("visible-bar", atTop);
+  topBar.classList.toggle("hidden-bar", !atTop);
+};
+
+// Img mapping
+const exteriroImages = {
+  "Stealth Grey": "../assets/configurator/configurator_stealth_grey.svg",
+  "Pearl White": "../assets/configurator/configurator_pearl_white.svg",
+  "Deep Blue": "../assets/configurator/configurator_deep_blue.svg",
+  "Solid Black": "../assets/configurator/configurator_solid_black.svg",
+  "Ultra Red": "../assets/configurator/configurator_ultra_red.svg",
+  "Dark Grey": "../assets/configurator/configurator_dark_grey.svg",
+};
+
+const interiorImages = {
+  Dark: "../assets/configurator/configurator_stealth_grey.svg",
+  Light: "../assets/configurator/configurator_pearl_white.svg",
+};
+
 // Color selection
 const handleColorButtonClick = (event) => {
   let button;
@@ -21,14 +44,6 @@ const handleColorButtonClick = (event) => {
 
     button.classList.add("btn-selected");
   }
-};
-
-// Turn on/off top bar on scroll
-const handleScroll = () => {
-  const atTop = window.scrollY === 0;
-
-  topBar.classList.toggle("visible-bar", atTop);
-  topBar.classList.toggle("hidden-bar", !atTop);
 };
 
 // Event listeners
