@@ -1,8 +1,8 @@
 const topBar = document.querySelector("#top-bar");
 const exteriorColorSection = document.querySelector("#exterior-buttons");
 const interiorColorSection = document.querySelector("#interior-buttons");
-const exteriorImage = document.querySelector("exterior-image");
-const interiorImage = document.querySelector("interior-image");
+const exteriorImage = document.querySelector("#exterior-image");
+const interiorImage = document.querySelector("#interior-image");
 
 // Turn on/off top bar on scroll
 const handleScroll = () => {
@@ -13,7 +13,7 @@ const handleScroll = () => {
 };
 
 // Img mapping
-const exteriroImages = {
+const exteriorImages = {
   "Stealth Grey": "../assets/configurator/configurator_stealth_grey.svg",
   "Pearl White": "../assets/configurator/configurator_pearl_white.svg",
   "Deep Blue": "../assets/configurator/configurator_deep_blue.svg",
@@ -43,6 +43,20 @@ const handleColorButtonClick = (event) => {
     buttons.forEach((btn) => btn.classList.remove("btn-selected"));
 
     button.classList.add("btn-selected");
+
+    // Change exterior img
+    if (event.currentTarget === exteriorColorSection) {
+      const color = button.querySelector("img").alt;
+
+      exteriorImage.src = exteriorImages[color];
+    }
+
+    // Change interior img
+    if (event.currentTarget === interiorColorSection) {
+      const color = button.querySelector("img").alt;
+
+      interiorImage.src = interiorImages[color];
+    }
   }
 };
 
