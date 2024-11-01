@@ -3,6 +3,7 @@ const exteriorColorSection = document.querySelector("#exterior-buttons");
 const interiorColorSection = document.querySelector("#interior-buttons");
 const exteriorImage = document.querySelector("#exterior-image");
 const interiorImage = document.querySelector("#interior-image");
+const wheelButtonsSection = document.querySelector("#wheel-buttons");
 
 // Turn on/off top bar on scroll
 const handleScroll = () => {
@@ -60,7 +61,26 @@ const handleColorButtonClick = (event) => {
   }
 };
 
+// Wheel selection
+const handleWheelButtonClick = (event) => {
+  if (event.target.tagName === "BUTTON") {
+    const buttons = document.querySelectorAll("#wheel-buttons button");
+
+    buttons.forEach((btn) => btn.classList.remove("bg-gray-700", "text-white"));
+
+    // Add selected styles to clicked btn
+    event.target.classList.add("bg-gray-700", "text-white");
+
+    const selectedWheel = event.target.textContent.includes("Performance");
+
+    exteriorImage.src = selectedWheel
+      ? "../assets/configurator/configurator_stealth_grey.svg"
+      : "../assets/configurator/configurator_stealth_grey.svg";
+  }
+};
+
 // Event listeners
 window.addEventListener("scroll", () => requestAnimationFrame(handleScroll));
 exteriorColorSection.addEventListener("click", handleColorButtonClick);
 interiorColorSection.addEventListener("click", handleColorButtonClick);
+wheelButtonsSection.addEventListener("click", handleWheelButtonClick);
