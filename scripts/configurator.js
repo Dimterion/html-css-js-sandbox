@@ -10,6 +10,7 @@ const selectedOptions = {
   "Performance Package": false,
   "Full Self-Driving": false,
 };
+const performanceBtn = document.querySelector("#performance-btn");
 
 // Turn on/off top bar on scroll
 const handleScroll = () => {
@@ -98,8 +99,15 @@ const handleWheelButtonClick = (event) => {
   }
 };
 
+// Performance package selection
+const handlePerformanceButtonClick = () => {
+  performanceBtn.classList.toggle("bg-gray-700");
+  performanceBtn.classList.toggle("text-white");
+};
+
 // Event listeners
 window.addEventListener("scroll", () => requestAnimationFrame(handleScroll));
 exteriorColorSection.addEventListener("click", handleColorButtonClick);
 interiorColorSection.addEventListener("click", handleColorButtonClick);
 wheelButtonsSection.addEventListener("click", handleWheelButtonClick);
+performanceBtn.addEventListener("click", handlePerformanceButtonClick);
