@@ -18,12 +18,18 @@ const pricing = {
   "Performance Wheels": 2500,
   "Performance Package": 5000,
   "Full Self-Driving": 8500,
-  "Included Accessories": {
+  "Add Accessories": {
     "Center Console Trays": 35,
-    "Modern Sunshades": 100,
-    "Interior Liners": 250,
+    "Modern Sunshade": 105,
+    "Interior Liners": 225,
   },
 };
+const fullSelfDrivingCheckbox = document.querySelector(
+  "#full-self-driving-checkbox"
+);
+const accessoryCheckboxes = document.querySelectorAll(
+  ".accessory-form-checkbox"
+);
 
 // Update total price in the UI
 const updateTotalPrice = () => {
@@ -37,6 +43,25 @@ const updateTotalPrice = () => {
   if (selectedOptions["Performance Package"]) {
     currentPrice += pricing["Performance Package"];
   }
+
+  if (selectedOptions["Full Self-Driving"]) {
+    currentPrice += pricing["Full Self-Driving"];
+  }
+
+  // Accessory checkboxes
+  accessoryCheckboxes.forEach((checkbox) => {
+    // Extract the accessory label
+    const accessoryLabel = checkbox
+      .closest("label")
+      .querySelector("span")
+      .textContent.trim();
+    const accessoryPrice = pricing["Add Accessories"][accessoryLabel];
+
+    // Add to current price if accessory is selected
+    if (checkbox.checked) {
+      currentPrice += accessoryPrice;
+    }
+  });
 
   // Update the total price in the UI
   totalPriceElement.textContent = `$${currentPrice.toLocaleString()}`;
@@ -141,9 +166,22 @@ const handlePerformanceButtonClick = () => {
   updateTotalPrice();
 };
 
+// Full self-driving selection
+const fullSelfDrivingChange = () => {
+  selectedOptions["Full Self-Driving"] = fullSelfDrivingCheckbox.checked;
+
+  updateTotalPrice();
+};
+
+// Handle accessory checkbox listeners
+accessoryCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", () => updateTotalPrice());
+});
+
 // Event listeners
 window.addEventListener("scroll", () => requestAnimationFrame(handleScroll));
 exteriorColorSection.addEventListener("click", handleColorButtonClick);
 interiorColorSection.addEventListener("click", handleColorButtonClick);
 wheelButtonsSection.addEventListener("click", handleWheelButtonClick);
 performanceBtn.addEventListener("click", handlePerformanceButtonClick);
+fullSelfDrivingCheckbox.addEventListener("change", fullSelfDrivingChange);
