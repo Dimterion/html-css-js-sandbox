@@ -11,6 +11,36 @@ const selectedOptions = {
   "Full Self-Driving": false,
 };
 const performanceBtn = document.querySelector("#performance-btn");
+const totalPriceElement = document.querySelector("#total-price");
+const basePrice = 52490;
+let currentPrice = basePrice;
+const pricing = {
+  "Performance Wheels": 2500,
+  "Performance Package": 5000,
+  "Full Self-Driving": 8500,
+  "Included Accessories": {
+    "Center Console Trays": 35,
+    "Modern Sunshades": 100,
+    "Interior Liners": 250,
+  },
+};
+
+// Update total price in the UI
+const updateTotalPrice = () => {
+  // Reset the current to base price
+  currentPrice = basePrice;
+
+  if (selectedOptions["Performance Wheels"]) {
+    currentPrice += pricing["Performance Wheels"];
+  }
+
+  if (selectedOptions["Performance Package"]) {
+    currentPrice += pricing["Performance Package"];
+  }
+
+  // Update the total price in the UI
+  totalPriceElement.textContent = `$${currentPrice.toLocaleString()}`;
+};
 
 // Turn on/off top bar on scroll
 const handleScroll = () => {
@@ -96,13 +126,19 @@ const handleWheelButtonClick = (event) => {
       event.target.textContent.includes("Performance");
 
     updateExteriorImage();
+    updateTotalPrice();
   }
 };
 
 // Performance package selection
 const handlePerformanceButtonClick = () => {
-  performanceBtn.classList.toggle("bg-gray-700");
+  const isSelected = performanceBtn.classList.toggle("bg-gray-700");
   performanceBtn.classList.toggle("text-white");
+
+  // Update selected options
+  selectedOptions["Performance Package"] = isSelected;
+
+  updateTotalPrice();
 };
 
 // Event listeners
