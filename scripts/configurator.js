@@ -30,6 +30,8 @@ const fullSelfDrivingCheckbox = document.querySelector(
 const accessoryCheckboxes = document.querySelectorAll(
   ".accessory-form-checkbox"
 );
+const downpaymentElement = document.querySelector("#down-payment");
+const monthlyPaymentElement = document.querySelector("#monthly-payment");
 
 // Update total price in the UI
 const updateTotalPrice = () => {
@@ -65,6 +67,29 @@ const updateTotalPrice = () => {
 
   // Update the total price in the UI
   totalPriceElement.textContent = `$${currentPrice.toLocaleString()}`;
+
+  updatePayment();
+};
+
+// Update payment based on the current price
+const updatePayment = () => {
+  const downPayment = currentPrice * 0.1;
+
+  downpaymentElement.textContent = `$${downPayment.toLocaleString()}`;
+
+  // Calculate details for 60-month and 3%
+  const months = 60;
+  const interestRate = 0.03;
+  const amount = currentPrice - downPayment;
+  const monthlyInterestRate = interestRate / 12;
+  const monthlyPayment =
+    (amount *
+      (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, months))) /
+    (Math.pow(1 + monthlyInterestRate, months) - 1);
+
+  monthlyPaymentElement.textContent = `$${monthlyPayment
+    .toFixed(2)
+    .toLocaleString()}`;
 };
 
 // Turn on/off top bar on scroll
@@ -177,6 +202,9 @@ const fullSelfDrivingChange = () => {
 accessoryCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener("change", () => updateTotalPrice());
 });
+
+// Initial total price update
+updateTotalPrice();
 
 // Event listeners
 window.addEventListener("scroll", () => requestAnimationFrame(handleScroll));
