@@ -8,6 +8,36 @@
     <title>Translator</title>
   </head>
   <body class="bg-gray-100 flex items-center justify-center h-screen">
-    Translator
+    <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
+      <h1 class="text-2xl font-semibold text-gray-800 text-center mb-4">
+        Translator
+      </h1>
+      <textarea
+        class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+        placeholder="Type here..."
+      ></textarea>
+      <div class="mt-4">
+        <label
+          for="voiceSelect"
+          class="block text-sm font-medium text-gray-700 mb-2"
+          >Select voice</label
+        >
+        <select
+          id="voiceSelect"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="default">Default voice</option>
+          <option value="voice1">Voice 1</option>
+          <option value="voice2">Voice 2</option>
+        </select>
+      </div>
+      <button
+        class="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        id="playButton"
+      >
+        Play
+      </button>
+    </div>
+    <script src="../scripts/translator.js"></script>
   </body>
 </html>
