@@ -1,7 +1,11 @@
 :root {
-  --bg-color: #f4f4f4;
-  --button-bg: #007bff;
-  --button-text: #fff;
+  --bg-color: #edede9;
+  --btnMain-bg: #023e8a;
+  --btnMain-hover: #0077b6;
+  --btnMain-text: #fff;
+  --btnSub-bg: #d90429;
+  --btnSub-hover: #ef233c;
+  --btnSub-text: white;
   --input-border: #ccc;
   --main-bg: #fff;
   --text-color: #333;
@@ -10,7 +14,8 @@
 
 [data-theme="dark"] {
   --bg-color: #333;
-  --button-bg: #555;
+  --btnMain-bg: #716a5c;
+  --btnMain-hover: #a39b8b;
   --input-border: #666;
   --main-bg: #444;
   --text-color: #f4f4f4;
@@ -40,17 +45,17 @@ body {
 }
 
 #tasks-themeBtn {
-  background: var(--button-bg);
+  background: var(--btnMain-bg);
   border: none;
   border-radius: 5px;
-  color: var(--button-text);
+  color: var(--btnMain-text);
   cursor: pointer;
   padding: 7px 8px 9px 6px;
   transition: var(--transition-time);
 }
 
 #tasks-themeBtn:hover {
-  background-color: #0056b3;
+  background-color: var(--btnMain-hover);
   transform: scale(1.05);
 }
 
@@ -69,17 +74,17 @@ body {
 }
 
 #tasks-addTaskBtn {
-  background: var(--button-bg);
+  background: var(--btnMain-bg);
   border: none;
-  border-radius: 4px;
-  color: var(--button-text);
+  border-radius: 5px;
+  color: var(--btnMain-text);
   cursor: pointer;
   padding: 10px;
   transition: var(--transition-time);
 }
 
 #tasks-addTaskBtn:hover {
-  background-color: #0056b3;
+  background-color: var(--btnMain-hover);
   transform: scale(1.05);
 }
 
@@ -93,36 +98,39 @@ body {
   border-bottom: 1px solid var(--input-border);
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 10px;
   transition: var(--transition-time);
 }
 
 #tasks-ul li:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #tasks-ul li .completed {
-  opacity: 0.5;
+  opacity: 0.7;
   text-decoration: line-through;
 }
 
 #tasks-ul li span {
+  align-items: center;
   cursor: pointer;
+  display: flex;
+  min-height: 50px;
   width: 100%;
 }
 
 #tasks-ul li button {
-  background: #ff4d4d;
+  background: var(--btnSub-bg);
   border: none;
   border-radius: 5px;
-  color: white;
+  color: var(--btnSub-text);
   cursor: pointer;
   padding: 5px 10px;
   transition: var(--transition-time);
 }
 
 #tasks-ul li button:hover {
-  background-color: #cc0000;
+  background-color: var(--btnSub-hover);
   transform: scale(1.05);
 }
 
