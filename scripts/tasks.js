@@ -1,11 +1,11 @@
+const themeBtn = document.getElementById("tasks-themeBtn");
 const taskInput = document.getElementById("task-input");
-const addTaskBtn = document.getElementById("add-task-btn");
-const tasksList = document.getElementById("tasks-list");
-const themeBtn = document.getElementById("tasks-theme-btn");
+const addTaskBtn = document.getElementById("tasks-addTaskBtn");
+const tasksList = document.getElementById("tasks-ul");
 
-// Load tasks and theme from localStorage on page load
+// Get tasks and theme from local storage on page load
 document.addEventListener("DOMContentLoaded", () => {
-  // Load tasks
+  // Get tasks
   let savedTasks = [];
 
   try {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addTaskToDOM(task.text, task.completed);
   });
 
-  // Load theme
+  // Get theme
   const savedTheme = localStorage.getItem("theme") || "light";
 
   document.body.dataset.theme = savedTheme;
@@ -57,7 +57,7 @@ const addTaskToDOM = (taskText, isCompleted) => {
   addTaskEvents(li);
 };
 
-// Mark as complete / delete task
+// Mark as complete/delete task
 const addTaskEvents = (li) => {
   const taskText = li.querySelector("span");
   const deleteBtn = li.querySelector("button");
@@ -65,21 +65,21 @@ const addTaskEvents = (li) => {
   taskText.addEventListener("click", () => {
     taskText.classList.toggle("completed");
 
-    // Update localStorage when task is marked as complete
+    // Update local storage when task is marked as complete
     saveTasksToLocalStorage();
   });
 
   deleteBtn.addEventListener("click", () => {
     tasksList.removeChild(li);
 
-    // Update localStorage when task is deleted
+    // Update local storage when task is deleted
     saveTasksToLocalStorage();
   });
 };
 
-// Save tasks to localStorage
+// Save tasks to local storage
 const saveTasksToLocalStorage = () => {
-  const tasks = Array.from(document.querySelectorAll("#tasks-list li")).map(
+  const tasks = Array.from(document.querySelectorAll("#tasks-ul li")).map(
     (li) => ({
       text: li.querySelector("span").textContent,
       completed: li.querySelector("span").classList.contains("completed"),
@@ -96,7 +96,7 @@ themeBtn.addEventListener("click", () => {
   document.body.dataset.theme = newTheme;
   updateThemeButton(newTheme);
 
-  // Save theme to localStorage
+  // Save theme to local storage
   localStorage.setItem("theme", newTheme);
 });
 
