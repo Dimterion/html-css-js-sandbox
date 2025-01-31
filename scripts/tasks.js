@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
   } catch (e) {
-    console.error("Error parsing tasks from localStorage.", e);
+    console.error("Error parsing tasks from localStorage:", e);
   }
 
   savedTasks.forEach((task) => {
@@ -57,7 +57,7 @@ const addTaskToDOM = (taskText, isCompleted) => {
   addTaskEvents(li);
 };
 
-// Mark as complete/delete task
+// Mark task as complete/delete
 const addTaskEvents = (li) => {
   const taskText = li.querySelector("span");
   const deleteBtn = li.querySelector("button");
@@ -100,7 +100,7 @@ themeBtn.addEventListener("click", () => {
   localStorage.setItem("theme", newTheme);
 });
 
-// Update theme button text
+// Update theme button icon
 const updateThemeButton = (theme) => {
   themeBtn.textContent = theme === "dark" ? "☀️" : "🌙";
 };
