@@ -1,8 +1,23 @@
 const voiceSelect = document.querySelector("#voiceSelect");
 const playButton = document.querySelector("#playButton");
 const textInput = document.querySelector("textarea");
-
+const languageSelect = document.querySelector("#languageSelect");
+const languages = [
+  { code: "en", name: "English" },
+  { code: "fr", name: "French" },
+  { code: "de", name: "German" },
+];
 let voices = [];
+
+languages.forEach(({ code, name }) => {
+  const option = document.createElement("option");
+
+  option.value = code;
+
+  option.textContent = name;
+
+  languageSelect.appendChild(option);
+});
 
 function loadVoices() {
   voices = speechSynthesis.getVoices();
