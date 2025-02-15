@@ -1,0 +1,24 @@
+/* \/ Details accordion \/ */
+.details-accordion {
+  --_duration: 0.3s;
+
+  inline-size: 50ch;
+
+  @media (prefers-reduced-motion: no-preference) {
+    interpolate-size: allow-keywords;
+  }
+
+  &::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow-y: clip;
+    transition: content-visibility var(--_duration) allow-discrete,
+      opacity var(--_duration), block-size var(--_duration);
+  }
+
+  &[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+}
+/* /\ Details accordion /\ */
