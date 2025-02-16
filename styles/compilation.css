@@ -22,3 +22,73 @@
   }
 }
 /* /\ Details accordion /\ */
+
+/* \/ Images comparison \/ */
+@layer imgCompare {
+  .imgCompare-section {
+    display: grid;
+
+    > * {
+      grid-area: 1 / 1;
+    }
+
+    > section {
+      display: grid;
+      place-content: center;
+    }
+
+    .imgCompare-before {
+      mask: linear-gradient(to right, #000 0, var(--position, 50%), #0000 0);
+    }
+
+    .imgCompare-after {
+      mask: linear-gradient(to right, #0000 0, var(--position, 50%), #000 0);
+    }
+
+    > input[type="range"] {
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+      z-index: 1;
+      -webkit-tap-highlight-color: transparent;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        background-color: CanvasText;
+        block-size: 100dvh;
+        inline-size: 4px;
+      }
+
+      &::-moz-range-thumb {
+        appearance: none;
+        background-color: CanvasText;
+        block-size: 100dvh;
+        inline-size: 4px;
+      }
+    }
+  }
+
+  img {
+    max-block-size: 80dvh;
+    max-inline-size: 100%;
+  }
+}
+
+@layer imgCompare.support {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    block-size: 100%;
+    color-scheme: dark light;
+  }
+
+  body {
+    display: grid;
+    font-family: system-ui, sans-serif;
+    min-block-size: 100%;
+  }
+}
+/* /\ Images comparison /\ */
