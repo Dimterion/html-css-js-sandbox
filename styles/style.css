@@ -13,9 +13,14 @@ body {
   left: calc(50vw - 115px);
   width: 200px;
   padding: 15px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 10px 0;
 }
 
 .link {

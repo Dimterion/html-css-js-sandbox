@@ -1,3 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  padding: 1rem;
+}
+
 /* \/ Details accordion \/ */
 .details-accordion {
   --_duration: 0.3s;
@@ -71,24 +87,6 @@
   img {
     max-block-size: 80dvh;
     max-inline-size: 100%;
-  }
-}
-
-@layer imgCompare.support {
-  * {
-    box-sizing: border-box;
-    margin: 0;
-  }
-
-  html {
-    block-size: 100%;
-    color-scheme: dark light;
-  }
-
-  body {
-    display: grid;
-    font-family: system-ui, sans-serif;
-    min-block-size: 100%;
   }
 }
 /* /\ Images comparison /\ */
