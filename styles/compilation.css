@@ -90,3 +90,132 @@ main {
   }
 }
 /* /\ Images comparison /\ */
+
+/* \/ Prices cards \/ */
+.pricesCards-section {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.pricesCards-article {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 28rem;
+  opacity: 1;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 20rem;
+}
+
+.pricesCards-section:has(.pricesCards-article:hover)
+  .pricesCards-article:not(:hover) {
+  opacity: 0.3;
+  transform: scale(0.98);
+}
+
+.pricesCards-article:hover {
+  background-color: #4f46e5;
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.pricesCards-article h2 {
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.pricesCards-article .price {
+  color: #4f46e5;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.pricesCards-article .price span {
+  color: #6b7280;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.pricesCards-article ul {
+  flex-grow: 1;
+  list-style: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
+}
+
+.pricesCards-article ul li {
+  color: #4b5563;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.pricesCards-article button {
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.pricesCards-article:hover h2,
+.pricesCards-article:hover .price,
+.pricesCards-article:hover ul li {
+  color: white;
+}
+
+.pricesCards-article:hover .price span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pricesCards-article:hover button {
+  background-color: white;
+  color: #4f46e5;
+}
+
+.pricesCards-article button:hover {
+  background-color: #4338ca;
+  color: white;
+}
+
+.pricesCards-article:hover button:hover {
+  background-color: #f3f4f6;
+  color: #4f46e5;
+}
+
+.pricesCards-article:nth-child(2) {
+  border: 2px solid #4f46e5;
+  height: 30rem;
+  position: relative;
+}
+
+.pricesCards-article:nth-child(2)::before {
+  background-color: #4f46e5;
+  border-radius: 12px;
+  color: white;
+  content: "Lorem";
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  position: absolute;
+  top: -12px;
+}
+
+.pricesCards-article:hover:nth-child(2)::before {
+  background-color: white;
+  color: #4f46e5;
+}
+/* /\ Prices cards /\ */
