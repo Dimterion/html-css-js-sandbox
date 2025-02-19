@@ -10,15 +10,15 @@ html {
 main {
   display: flex;
   flex-flow: column nowrap;
-  gap: 2rem;
+  gap: 3rem;
   padding: 1rem;
 }
 
 /* \/ Details accordion \/ */
 .details-accordion {
-  --_duration: 0.3s;
+  --duration: 0.5s;
 
-  inline-size: 50ch;
+  width: 15rem;
 
   @media (prefers-reduced-motion: no-preference) {
     interpolate-size: allow-keywords;
@@ -28,8 +28,8 @@ main {
     block-size: 0;
     opacity: 0;
     overflow-y: clip;
-    transition: content-visibility var(--_duration) allow-discrete,
-      opacity var(--_duration), block-size var(--_duration);
+    transition: content-visibility var(--duration) allow-discrete,
+      opacity var(--duration), block-size var(--duration);
   }
 
   &[open]::details-content {
@@ -71,15 +71,15 @@ main {
       &::-webkit-slider-thumb {
         appearance: none;
         background-color: CanvasText;
-        block-size: 100dvh;
-        inline-size: 4px;
+        block-size: 10rem;
+        inline-size: 0.5rem;
       }
 
       &::-moz-range-thumb {
         appearance: none;
         background-color: CanvasText;
-        block-size: 100dvh;
-        inline-size: 4px;
+        block-size: 10rem;
+        inline-size: 0.5rem;
       }
     }
   }
@@ -95,7 +95,9 @@ main {
 .pricesCards-section {
   align-items: center;
   display: flex;
-  gap: 1.5rem;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .pricesCards-article {
@@ -110,7 +112,7 @@ main {
   padding: 2rem;
   transition: all 0.3s ease;
   text-align: center;
-  width: 20rem;
+  width: 18rem;
 }
 
 .pricesCards-section:has(.pricesCards-article:hover)
