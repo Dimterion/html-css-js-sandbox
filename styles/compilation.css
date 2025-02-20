@@ -221,3 +221,16 @@ main {
   color: #4f46e5;
 }
 /* /\ Prices cards /\ */
+
+/* \/ Corners borders \/ */
+.cornersBorders-img {
+  --s: 50px; /* Corners size */
+
+  border: 10px solid white;
+  mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+      calc(100% - var(--s)) calc(100% - var(--s)),
+    conic-gradient(#000 0 0) content-box;
+  max-width: 500px;
+  padding: 15px; /* Gap between element and corners */
+}
+/* /\ Corners borders /\ */
