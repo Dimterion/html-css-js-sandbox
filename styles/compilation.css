@@ -12,6 +12,11 @@ main {
   flex-flow: column nowrap;
   gap: 3rem;
   padding: 1rem;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
 }
 
 /* \/ Details accordion \/ */
@@ -37,6 +42,10 @@ main {
     opacity: 1;
   }
 }
+
+.details-accordion summary {
+  cursor: pointer;
+}
 /* /\ Details accordion /\ */
 
 /* \/ Images comparison \/ */
@@ -50,6 +59,8 @@ main {
 
     > section {
       display: grid;
+      max-height: 40rem;
+      object-fit: cover;
       place-content: center;
     }
 
@@ -230,7 +241,8 @@ main {
   mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
       calc(100% - var(--s)) calc(100% - var(--s)),
     conic-gradient(#000 0 0) content-box;
-  max-width: 500px;
+  max-width: 90vw;
+  object-fit: cover;
   padding: 15px; /* Gap between element and corners */
 }
 /* /\ Corners borders /\ */
