@@ -287,3 +287,50 @@ hr {
   }
 }
 /* /\ Cogwheel /\ */
+
+/* \/ Glowing border \/ */
+@property --a {
+  inherits: false;
+  initial-value: -100turn;
+  syntax: "<angle>";
+}
+
+@property --i {
+  inherits: false;
+  initial-value: 1;
+  syntax: "<number>";
+}
+
+.glowingBorder-img {
+  aspect-ratio: 1;
+  border: 5px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  mask: conic-gradient(#000 0 0) content-box,
+    linear-gradient(
+        calc(mod(var(--a), 180deg) * var(--i) + var(--_a, 45deg)),
+        #0000 30%,
+        #000 40% 60%,
+        #0000 70%
+      )
+      subtract,
+    conic-gradient(#000 0 0) padding-box;
+  padding: 5px;
+  transition: --i 0s, --a 300s linear;
+  width: 250px;
+
+  @starting-style {
+    --a: 0turn;
+  }
+}
+
+.glowingBorder-img__alt {
+  --_a: -45deg;
+}
+
+.glowingBorder-img:hover {
+  --a: 0turn;
+  --i: 0;
+  transition: --i 0.5s ease-out, --a 0s 0.5s;
+}
+/* /\ Glowing border /\ */
