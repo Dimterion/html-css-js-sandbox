@@ -7,6 +7,87 @@ html {
   color-scheme: dark light;
 }
 
+/* \/ Menu \/ */
+header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+}
+
+#collapse:not(:checked) + .header-label:before {
+  box-shadow: 0px -10px 0px 0px #fff, 0px 10px 0px 0px #fff;
+  opacity: 1;
+  position: relative;
+  transform: translateY(0px);
+}
+
+.header-label:before {
+  background: #fff;
+  box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px 0px #fff;
+  box-sizing: content-box;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  margin-right: 10px;
+  opacity: 0.7;
+  position: relative;
+  transition: all 0.2s linear;
+  width: 30px;
+}
+
+.header-label {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.header-input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+#collapse:not(:checked) ~ ul {
+  margin-top: 0;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: all 0.2s ease-out;
+}
+
+#collapse:checked ~ ul {
+  max-height: 500px;
+  opacity: 1;
+  padding: 10px 0;
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+
+.header-a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-ul {
+  background: gray;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 70px;
+}
+
+.header-li {
+  padding: 10px 0;
+}
+/* /\ Menu /\ */
+
 main {
   display: flex;
   flex-flow: column nowrap;
@@ -177,7 +258,7 @@ hr {
   background-color: #4f46e5;
   border: none;
   border-radius: 0.5rem;
-  color: white;
+  color: #fff;
   cursor: pointer;
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -187,7 +268,7 @@ hr {
 .pricesCards-article:hover h2,
 .pricesCards-article:hover .price,
 .pricesCards-article:hover ul li {
-  color: white;
+  color: #fff;
 }
 
 .pricesCards-article:hover .price span {
@@ -195,13 +276,13 @@ hr {
 }
 
 .pricesCards-article:hover button {
-  background-color: white;
+  background-color: #fff;
   color: #4f46e5;
 }
 
 .pricesCards-article button:hover {
   background-color: #4338ca;
-  color: white;
+  color: #fff;
 }
 
 .pricesCards-article:hover button:hover {
@@ -218,7 +299,7 @@ hr {
 .pricesCards-article:nth-child(2)::before {
   background-color: #4f46e5;
   border-radius: 12px;
-  color: white;
+  color: #fff;
   content: "Lorem";
   font-size: 0.875rem;
   font-weight: 500;
@@ -228,7 +309,7 @@ hr {
 }
 
 .pricesCards-article:hover:nth-child(2)::before {
-  background-color: white;
+  background-color: #fff;
   color: #4f46e5;
 }
 /* /\ Prices cards /\ */
@@ -237,7 +318,7 @@ hr {
 .cornersBorders-img {
   --s: 50px; /* Corners size */
 
-  border: 10px solid white;
+  border: 10px solid #fff;
   mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
       calc(100% - var(--s)) calc(100% - var(--s)),
     conic-gradient(#000 0 0) content-box;
@@ -331,6 +412,7 @@ hr {
 .glowingBorder-img:hover {
   --a: 0turn;
   --i: 0;
+
   transition: --i 0.5s ease-out, --a 0s 0.5s;
 }
 /* /\ Glowing border /\ */
