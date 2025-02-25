@@ -100,8 +100,8 @@ hr {
   width: 100%;
 }
 
-/* \/ Details accordion \/ */
-.details-accordion {
+/* \/ Accordion \/ */
+.accordion-details {
   --duration: 0.5s;
 
   width: 15rem;
@@ -124,10 +124,10 @@ hr {
   }
 }
 
-.details-accordion summary {
+.accordion-details summary {
   cursor: pointer;
 }
-/* /\ Details accordion /\ */
+/* /\ Accordion /\ */
 
 /* \/ Images comparison \/ */
 @layer imgCompare {
@@ -227,17 +227,17 @@ hr {
   transition: color 0.3s ease;
 }
 
-.pricesCards-article .price {
+.pricesCards-article .pricesCards-price {
   color: #4f46e5;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   transition: color 0.3s ease;
 }
 
-.pricesCards-article .price span {
+.pricesCards-article .pricesCards-price span {
   color: #6b7280;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
@@ -266,12 +266,12 @@ hr {
 }
 
 .pricesCards-article:hover h2,
-.pricesCards-article:hover .price,
+.pricesCards-article:hover .pricesCards-price,
 .pricesCards-article:hover ul li {
   color: #fff;
 }
 
-.pricesCards-article:hover .price span {
+.pricesCards-article:hover .pricesCards-price span {
   color: rgba(255, 255, 255, 0.8);
 }
 
