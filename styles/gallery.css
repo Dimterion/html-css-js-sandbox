@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  background: gray;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+}
+
+.slides {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  align-items: center;
+  background: turquoise;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+}
+
+.slide1 {
+  background-image: url(../assets/img-forest.jpg);
+}
+.slide2 {
+  background-image: url(../assets/img-lake.jpg);
+}
+.slide3 {
+  background-image: url(../assets/img-park.jpg);
+}
+.slide4 {
+  background-image: url(../assets//img-pond.jpg);
+}
+.slide5 {
+  background-image: url(../assets/img_hill.jpg);
+}
+
+.slide > * {
+  margin: 0;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.slide p {
+  font-size: 2rem;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.slide p:nth-child(2) {
+  font-size: 4rem;
+}
+
+.slide.open {
+  font-size: 3rem;
+}
