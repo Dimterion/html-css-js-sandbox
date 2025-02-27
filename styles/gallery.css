@@ -92,3 +92,45 @@ body {
   flex: 5;
   font-size: 3rem;
 }
+
+@media (max-width: 900px) {
+  .slides {
+    flex-direction: column;
+  }
+
+  .slide {
+    flex-direction: row;
+  }
+
+  .slide > * {
+    flex: 0 1 auto;
+  }
+
+  .slide > *:first-child {
+    transform: translateX(-100%);
+  }
+
+  .slide.open-active > *:first-child {
+    transform: translateX(0);
+  }
+
+  .slide > *:last-child {
+    transform: translateX(100%);
+  }
+
+  .slide.slide.open-active > *:last-child {
+    transform: translateX(0);
+  }
+
+  .slide p {
+    font-size: 1rem;
+  }
+
+  .slide p:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .slide.open {
+    font-size: 1.5rem;
+  }
+}
