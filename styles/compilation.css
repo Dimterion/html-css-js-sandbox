@@ -124,8 +124,33 @@ hr {
   }
 }
 
+.accordion-details[open] summary::after {
+  transform: rotate(0deg);
+}
+
 .accordion-details summary {
   cursor: pointer;
+  position: relative;
+
+  &::marker {
+    content: "";
+  }
+
+  &::before,
+  &::after {
+    border-block-start: 3px solid #fff;
+    content: "";
+    height: 0;
+    inset-block-start: 50%;
+    inset-inline-end: 0;
+    position: absolute;
+    width: 1rem;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    transform-origin: 50%;
+  }
 }
 /* /\ Accordion /\ */
 
