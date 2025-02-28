@@ -19,8 +19,18 @@ function displayMatches() {
   const matchArray = findMatches(this.value, cities);
   const html = matchArray
     .map((place) => {
+      const regex = new RegExp(this.value, "gi");
+      const cityName = place.city.replace(
+        regex,
+        `<span class="highlight">${this.value}</span>`
+      );
+      const departmentName = place.department.replace(
+        regex,
+        `<span class="highlight">${this.value}</span>`
+      );
+
       return `<li>
-    <span class="name">${place.city}, ${place.department}</span>
+    <span class="name">${cityName}, ${departmentName}</span>
     </li>`;
     })
     .join("");
