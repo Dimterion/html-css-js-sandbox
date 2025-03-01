@@ -35,7 +35,7 @@ function displayMatches() {
 
       return `<li>
     <span>${cityName}, ${departmentName}</span>
-    <span>${numberWithCommas(place.population)}</span>
+    <span class="population">${numberWithCommas(place.population)}</span>
     </li>`;
     })
     .join("");

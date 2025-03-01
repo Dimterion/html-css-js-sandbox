@@ -1,3 +1,72 @@
+html {
+  background: lightblue;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+}
+
+.search-form {
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+input.search {
+  border: 10px solid #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  font-size: 40px;
+  left: -10%;
+  margin: 0;
+  position: relative;
+  outline: 0;
+  text-align: center;
+  top: 10px;
+  width: 120%;
+  z-index: 2;
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.suggestions li {
+  background: white;
+  border-bottom: 1px solid #d8d8d8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.suggestions li:nth-child(even) {
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+}
+
+.suggestions li:nth-child(odd) {
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+}
+
+span.population {
+  font-size: 15px;
+}
+
 .highlight {
   background: lightblue;
 }
