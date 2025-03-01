@@ -5,8 +5,6 @@ const prom = fetch(endpoint)
   .then((data) => data.json())
   .then((data) => cities.push(...data));
 
-console.log(cities);
-
 function findMatches(wordToMatch, cities) {
   return cities.filter((place) => {
     const regex = new RegExp(wordToMatch, "gi");
@@ -32,6 +30,8 @@ function displayMatches() {
         regex,
         `<span class="highlight">${this.value}</span>`
       );
+
+      if (this.value === "") return;
 
       return `<li>
     <span>${cityName}, ${departmentName}</span>
