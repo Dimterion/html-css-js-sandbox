@@ -11,27 +11,30 @@ html {
 
 input {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .search-form {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
   margin: 50px auto;
-  max-width: 400px;
+  max-width: 330px;
 }
 
 input.search {
-  border: 10px solid #f7f7f7;
+  border: 5px solid #f7f7f7;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
   font-size: 40px;
-  left: -10%;
   margin: 0;
+  max-width: 97vw;
   position: relative;
   outline: 0;
   text-align: center;
   top: 10px;
-  width: 120%;
-  z-index: 2;
+  width: 350px;
+  z-index: 1;
 }
 
 .suggestions {
@@ -50,7 +53,6 @@ input.search {
   margin: 0;
   padding: 20px;
   text-transform: capitalize;
-  transition: 0.2s;
 }
 
 .suggestions li:nth-child(even) {
