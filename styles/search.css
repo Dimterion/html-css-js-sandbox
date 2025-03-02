@@ -10,8 +10,8 @@ html {
 }
 
 input {
+  padding: 0.75rem;
   width: 100%;
-  padding: 10px;
 }
 
 .search-form {
@@ -24,15 +24,15 @@ input {
 
 input.search {
   border: 5px solid #f7f7f7;
-  border-radius: 5px;
+  border-radius: 0.25rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
-  font-size: 40px;
+  font-size: 1rem;
   margin: 0;
   max-width: 97vw;
   position: relative;
   outline: 0;
   text-align: center;
-  top: 10px;
+  top: 0.25rem;
   width: 350px;
   z-index: 1;
 }
@@ -51,7 +51,7 @@ input.search {
   justify-content: space-between;
   list-style: none;
   margin: 0;
-  padding: 20px;
+  padding: 1rem;
   text-transform: capitalize;
 }
 
@@ -66,7 +66,7 @@ input.search {
 }
 
 span.population {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .highlight {
