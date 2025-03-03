@@ -67,6 +67,19 @@ a {
   text-decoration: none;
 }
 
+.highlight {
+  background: var(--main-bg);
+  border-bottom: 2px solid var(--main-bg);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  left: 0;
+  position: absolute;
+  transition: all 0.2s;
+  top: 0;
+  z-index: -1;
+}
+
 #tasks-themeBtn {
   background: var(--btnMain-bg);
   border: none;
