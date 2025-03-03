@@ -26,11 +26,20 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   display: flex;
+  flex-flow: column nowrap;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
   transition: var(--transition-time);
+}
+
+.tasks-ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
 .tasks-main {
@@ -42,6 +51,20 @@ body {
   transition: transform var(--transition-time),
     box-shadow var(--transition-time);
   width: 100%;
+}
+
+.tasks-article {
+  font-size: 1rem;
+  line-height: 2;
+  margin: 0 auto;
+}
+
+a {
+  background: var(--input-border);
+  border-radius: 20px;
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
 }
 
 #tasks-themeBtn {
