@@ -47,6 +47,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   max-width: 500px;
+  margin: auto;
   padding: 20px;
   transition: transform var(--transition-time),
     box-shadow var(--transition-time);
@@ -68,8 +69,8 @@ a {
 }
 
 .highlight {
-  background: var(--main-bg);
-  border-bottom: 2px solid var(--main-bg);
+  background: var(--btnMain-hover);
+  border-bottom: 2px solid var(--btnMain-hover);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: block;

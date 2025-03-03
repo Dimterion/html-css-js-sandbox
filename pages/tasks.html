@@ -17,7 +17,7 @@
         </ul>
       </nav>
     </header>
-    <main class="tasks-main">
+    <main>
       <article class="tasks-article">
         <p>
           Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipisicing
@@ -25,13 +25,15 @@
           obcaecati distinctio, aut itaque, qui vitae!
         </p>
       </article>
-      <button aria-label="Toggle color theme" id="tasks-themeBtn">🌙</button>
-      <h1>Tasks</h1>
-      <section class="tasks-section">
-        <input type="text" id="task-input" placeholder="Add a new task..." />
-        <button id="tasks-addTaskBtn">Add Task</button>
+      <section class="tasks-main">
+        <button aria-label="Toggle color theme" id="tasks-themeBtn">🌙</button>
+        <h1>Tasks</h1>
+        <section class="tasks-section">
+          <input type="text" id="task-input" placeholder="Add a new task..." />
+          <button id="tasks-addTaskBtn">Add Task</button>
+        </section>
+        <ul id="tasks-ul"></ul>
       </section>
-      <ul id="tasks-ul"></ul>
     </main>
     <script src="../scripts/tasks.js"></script>
   </body>
