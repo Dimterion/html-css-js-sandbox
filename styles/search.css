@@ -10,19 +10,19 @@ html {
 }
 
 .site-wrap {
-  max-width: 700px;
-  margin: 70px auto;
   background: white;
-  padding: 40px;
-  text-align: justify;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 2rem;
+  text-align: justify;
   transform: scale(0.98);
   transition: transform 0.5s;
 }
 
 .site-wrap img {
-  width: 500px;
   max-width: 70vw;
+  width: 500px;
 }
 
 .fixed-nav .site-wrap {
@@ -30,57 +30,57 @@ html {
 }
 
 header {
-  text-align: center;
-  height: 50vh;
+  align-items: center;
   background: url(../assets/img-pond.jpg) bottom center no-repeat;
   background-size: cover;
   display: flex;
-  align-items: center;
+  height: 50vh;
   justify-content: center;
+  text-align: center;
 }
 
 h1 {
   color: white;
-  font-size: 7vw;
   text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+  font-size: 7vw;
 }
 
 nav {
   background: black;
-  top: 0;
-  width: 100%;
-  transition: all 0.5s;
   position: relative;
+  top: 0;
+  transition: all 0.5s;
+  width: 100%;
   z-index: 1;
 }
 
 .fixed-nav nav {
-  position: fixed;
   box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
 }
 
 nav ul {
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: flex;
 }
 
 nav li {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
 }
 
 li.logo {
+  background: white;
+  font-size: 30px;
+  font-weight: 600;
   max-width: 0;
   overflow: hidden;
-  background: white;
   transition: all 1s;
-  font-weight: 600;
-  font-size: 30px;
 }
 
 .fixed-nav li.logo {
@@ -92,12 +92,12 @@ li.logo a {
 }
 
 nav a {
-  text-decoration: none;
-  padding: 20px;
   display: inline-block;
   color: white;
-  transition: all 0.2s;
+  padding: 20px;
+  text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.2s;
 }
 
 input {
