@@ -441,3 +441,18 @@ hr {
   transition: --i 0.5s ease-out, --a 0s 0.5s;
 }
 /* /\ Glowing border /\ */
+
+/* \/ Mouse move shadow \/ */
+.mouseMoveShadow-div {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.mouseMoveShadow-div h3 {
+  font-size: 5rem;
+  text-shadow: 10px 10px 0 gray;
+}
+/* /\ Mouse move shadow /\ */
