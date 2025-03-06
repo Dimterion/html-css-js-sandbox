@@ -451,7 +451,7 @@ hr {
   min-height: 100vh;
 }
 
-.mouseMoveShadow-div h3 {
+.mouseMoveShadow-h3 {
   font-size: 5rem;
   text-shadow: 10px 10px 0 gray;
 }
