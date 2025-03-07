@@ -101,7 +101,7 @@ hr {
 }
 
 /* \/ Accordion \/ */
-.accordion-details {
+/* .accordion-details {
   --duration: 0.5s;
 
   width: 15rem;
@@ -151,7 +151,7 @@ hr {
     transform: rotate(90deg);
     transform-origin: 50%;
   }
-}
+} */
 /* /\ Accordion /\ */
 
 /* \/ Images comparison \/ */
