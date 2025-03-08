@@ -214,3 +214,30 @@ a {
     width: 100%;
   }
 }
+
+.tasks-section__checkboxes {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tasks-checkboxItem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.tasks-checkboxItem:last-child {
+  border-bottom: 0;
+}
+
+.tasks-checkboxInput:checked + p {
+  background: #f9f9f9;
+  text-decoration: line-through;
+}
+
+.tasks-checkboxInput[type="checkbox"] {
+  margin: 20px;
+}
