@@ -126,3 +126,27 @@ function highlightLink() {
 }
 
 triggers.forEach((a) => a.addEventListener("mouseenter", highlightLink));
+
+const checkboxes = document.querySelectorAll(
+  '.tasks-section__checkboxes input[type="checkbox"]'
+);
+
+let lastChecked;
+
+function handleCheck(e) {
+  let inBetween = false;
+
+  if (e.shiftKey && this.checked) {
+    checkboxes.forEach((checkbox) => {
+      console.log(checkbox);
+    });
+  }
+
+  lastChecked = this;
+}
+
+checkboxes.forEach((checkbox) =>
+  checkbox.addEventListener("click", handleCheck)
+);
+
+console.log(checkboxes);
