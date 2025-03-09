@@ -461,10 +461,12 @@ hr {
 [data-expandable] [data-expand-text] {
   --line-height: 1.5;
   --lines-to-show: 3;
+
   box-sizing: border-box;
+  height: calc(var(--line-height) * var(--lines-to-show) * 1em);
   line-height: var(--line-height);
   overflow: hidden;
-  height: calc(var(--line-height) * var(--lines-to-show) * 1em);
+  position: relative;
 }
 
 [data-overflow="false"] [data-expand-text] {
@@ -477,5 +479,18 @@ hr {
 
 [data-overflow="false"] [data-expand-button] {
   display: none;
+}
+
+[data-expandable] [data-expand-text]::before {
+  background: linear-gradient(to bottom, transparent, var(--bg-color));
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+[data-overflow="false"] [data-expand-text]::before,
+[data-expandable].expanded [data-expand-text]::before {
+  background: initial;
 }
 /* /\ Expandable article /\ */
