@@ -467,7 +467,15 @@ hr {
   height: calc(var(--line-height) * var(--lines-to-show) * 1em);
 }
 
+[data-overflow="false"] [data-expand-text] {
+  height: initial;
+}
+
 [data-expandable].expanded [data-expand-text] {
   height: initial;
+}
+
+[data-overflow="false"] [data-expand-button] {
+  display: none;
 }
 /* /\ Expandable article /\ */
