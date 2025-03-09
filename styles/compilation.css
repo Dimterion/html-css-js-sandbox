@@ -456,3 +456,18 @@ hr {
   text-shadow: 10px 10px 0 gray;
 }
 /* /\ Mouse move shadow /\ */
+
+/* \/ Expandable article \/ */
+[data-expandable] [data-expand-text] {
+  --line-height: 1.5;
+  --lines-to-show: 3;
+  box-sizing: border-box;
+  line-height: var(--line-height);
+  overflow: hidden;
+  height: calc(var(--line-height) * var(--lines-to-show) * 1em);
+}
+
+[data-expandable].expanded [data-expand-text] {
+  height: initial;
+}
+/* /\ Expandable article /\ */
