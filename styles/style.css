@@ -6,3 +6,8 @@ body {
   padding: 0;
   margin: 0;
 }
+
+#index-nav {
+  display: flex;
+  flex-flow: column nowrap;
+}
