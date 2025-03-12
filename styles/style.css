@@ -11,3 +11,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
 }
+
+.index-a {
+  padding: 0.5rem;
+}
