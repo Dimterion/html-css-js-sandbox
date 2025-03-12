@@ -5,13 +5,27 @@ html {
 body {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 #index-nav {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
 }
 
 .index-a {
-  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  color: black;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 2rem 0.5rem;
+  text-decoration: none;
+  transition: 0.5s;
+  width: 10rem;
+}
+
+.index-a:hover {
+  transform: scale(0.9);
+  transition: 0.5s;
 }
