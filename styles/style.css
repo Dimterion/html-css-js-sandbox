@@ -13,6 +13,12 @@ body {
   text-align: center;
 }
 
+header,
+footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.25rem;
+}
+
 #index-nav {
   display: grid;
   gap: 1rem;

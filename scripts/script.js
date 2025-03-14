@@ -14,7 +14,7 @@ const indexNav = document.getElementById("index-nav");
 
 pages.forEach((page) => {
   const indexA = document.createElement("a");
-  
+
   indexA.innerText = page;
 
   indexA.classList.add("index-a");
@@ -23,3 +23,5 @@ pages.forEach((page) => {
 
   indexNav.appendChild(indexA);
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
