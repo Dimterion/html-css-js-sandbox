@@ -4,21 +4,16 @@ function playSound(e) {
 
   if (!audio) return;
 
-  key.classList.add("playing");
+  key.style.animationPlayState = "running";
+
+  const element = key;
+  const clonedElement = element.cloneNode(true);
+
+  element.parentNode.replaceChild(clonedElement, element);
 
   audio.currentTime = 0;
 
   audio.play();
 }
-
-function removeTransition(e) {
-  if (e.propertyName !== "transform") return;
-
-  e.target.classList.remove("playing");
-}
-
-const keys = Array.from(document.querySelectorAll(".key"));
-
-keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
 
 window.addEventListener("keydown", playSound);

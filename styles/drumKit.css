@@ -19,7 +19,25 @@ html {
   min-height: 100vh;
 }
 
+@keyframes highlightKey {
+  0% {
+    border-color: black;
+    width: 10rem;
+  }
+
+  50% {
+    border-color: yellow;
+    box-shadow: 0 0 1rem yellow;
+  }
+
+  100% {
+    border-color: black;
+    width: 10rem;
+  }
+}
+
 .key {
+  animation: highlightKey 0.05s forwards paused;
   background: rgba(0, 0, 0, 0.5);
   border: 0.5rem solid black;
   border-radius: 0.5rem;
@@ -29,14 +47,7 @@ html {
   padding: 1rem 0.5rem;
   text-align: center;
   text-shadow: 0 0 0.5rem black;
-  transition: all 0.05s ease;
   width: 10rem;
-}
-
-.playing {
-  border-color: yellow;
-  box-shadow: 0 0 1rem yellow;
-  transform: scale(1.1);
 }
 
 kbd {
