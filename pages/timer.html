@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Timer." />
+    <title>Timer</title>
+    <link rel="stylesheet" href="../styles//timer.css" />
+  </head>
+  <body>
+    <main class="timer-container">
+      <h1>⏱️Timer</h1>
+      <input
+        type="number"
+        id="minutesInput"
+        placeholder="Enter interval in minutes"
+        min="1"
+      />
+      <button onclick="startTimer()" aria-label="Start timer">Start</button>
+      <section id="countdownDisplay"></section>
+    </main>
+    <script src="../scripts/timer.js"></script>
+  </body>
+</html>
