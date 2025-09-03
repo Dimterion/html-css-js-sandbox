@@ -2,13 +2,16 @@ const pages = [
   "Animations",
   "Compilation",
   "Configurator",
+  "DrumKit",
   "Gallery",
   "GitHub-landing-page",
+  "HorizontalScroll",
   "InteractiveTable",
   "ScrollSnap",
   "Search",
   "Tasks",
   "ThemeSwitcher",
+  "Timer",
 ];
 const indexNav = document.getElementById("index-nav");
 

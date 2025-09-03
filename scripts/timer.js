@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+  if (
+    Notification.permission !== "granted" &&
+    Notification.permission !== "denied"
+  ) {
+    Notification.requestPermission();
+  }
+});
+
 let timerInterval;
 
 const countdownDisplay = document.getElementById("countdownDisplay");
@@ -12,7 +21,7 @@ function startTimer() {
     return;
   }
 
-  let timeRemaining = minutes * 60;
+  let timeRemaining = minutes;
 
   updateDisplay(timeRemaining);
 
@@ -41,19 +50,10 @@ function updateDisplay(time) {
 }
 
 function sendNotification(pageTitle = "Time's up!") {
-  // Send notification or alert
   if (Notification.permission === "granted") {
-    new Notification("⏰Time's up!");
-  } else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then((permission) => {
-      if (permission === "granted") {
-        new Notification("⏰Time's up!");
-      } else {
-        alert("⏰Time's up!");
-      }
-    });
+    new Notification("⏰ Time's up!");
   } else {
-    alert("⏰Time's up!");
+    alert("⏰ Time's up!");
   }
 
   // Flash page title
