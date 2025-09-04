@@ -13,15 +13,21 @@ const countdownDisplay = document.getElementById("countdownDisplay");
 
 countdownDisplay.textContent = "0:00";
 
-function startTimer() {
-  const minutes = parseInt(document.getElementById("minutesInput").value);
+function startTimer(interval) {
+  let minutes;
+
+  if (interval) {
+    minutes = interval;
+  } else {
+    minutes = parseInt(document.getElementById("minutesInput").value);
+  }
 
   if (isNaN(minutes) || minutes <= 0) {
     alert("Please enter a valid number of minutes.");
     return;
   }
 
-  let timeRemaining = minutes;
+  let timeRemaining = minutes * 60;
 
   updateDisplay(timeRemaining);
 
@@ -57,7 +63,7 @@ function sendNotification(pageTitle = "Time's up!") {
   }
 
   // Flash page title
-  let originalTitle = document.title;
+  let originalTitle = "Timer";
   let visible = true;
 
   const interval = setInterval(() => {

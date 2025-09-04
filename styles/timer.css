@@ -29,6 +29,14 @@ button {
   cursor: pointer;
 }
 
+@media (max-width: 300px) {
+  button {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+}
+
 #countdownDisplay {
   margin-top: 20px;
   font-size: 24px;

@@ -17,6 +17,26 @@
         min="1"
       />
       <button onclick="startTimer()" aria-label="Start timer">Start</button>
+      <section>
+        <button
+          onclick="startTimer(15)"
+          aria-label="Start timer for 15 minutes"
+        >
+          15 min
+        </button>
+        <button
+          onclick="startTimer(30)"
+          aria-label="Start timer for 30 minutes"
+        >
+          30 min
+        </button>
+        <button
+          onclick="startTimer(60)"
+          aria-label="Start timer for 60 minutes"
+        >
+          60 min
+        </button>
+      </section>
       <section id="countdownDisplay"></section>
     </main>
     <script src="../scripts/timer.js"></script>
