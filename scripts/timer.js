@@ -34,15 +34,17 @@ function startTimer(interval) {
   clearInterval(timerInterval);
 
   timerInterval = setInterval(() => {
-    timeRemaining--;
-
-    updateDisplay(timeRemaining);
-
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
 
       sendNotification();
+
+      return;
     }
+
+    updateDisplay(timeRemaining);
+
+    timeRemaining--;
   }, 1000);
 }
 
@@ -63,7 +65,7 @@ function sendNotification(pageTitle = "Time's up!") {
   }
 
   // Flash page title
-  let originalTitle = "Timer";
+  const originalTitle = document.title;
   let visible = true;
 
   const interval = setInterval(() => {
