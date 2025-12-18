@@ -1,0 +1,126 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #18181b;
+  color: #f9fafb;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button,
+.import-label {
+  background: #4f46e5;
+  color: #f9fafb;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover,
+.import-label:hover {
+  background: #4338ca;
+}
+
+.import-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+main {
+  padding: 1rem 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+th {
+  text-align: left;
+  background: #f3f4f6;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  width: 320px;
+  max-width: 90vw;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 0.3rem;
+  margin-top: 0.15rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.25rem;
+}
+
+.modal textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
