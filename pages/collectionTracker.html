@@ -8,7 +8,43 @@
   </head>
   <body>
     <header>
-      <h1>Collection Tracker</h1>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1">
+        <div style="display: flex; align-items: center; gap: 1rem">
+          <h1>Collection Tracker</h1>
+          <span id="item-count" style="font-size: 0.9rem; color: #03045e"
+            >0 items</span
+          >
+        </div>
+        <div style="display: flex; gap: 0.5rem; max-width: 400px">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search..."
+            style="
+              flex: 1;
+              padding: 0.4rem 0.7rem;
+              border: 1px solid #d1d5db;
+              border-radius: 0.25rem;
+              font-size: 0.9rem;
+            "
+          />
+          <button
+            id="clear-search-btn"
+            style="
+              display: none;
+              background: #6b7280;
+              color: white;
+              border: none;
+              border-radius: 0.25rem;
+              padding: 0.4rem 0.7rem;
+              font-size: 0.9rem;
+              cursor: pointer;
+            "
+          >
+            Clear
+          </button>
+        </div>
+      </div>
       <div class="actions">
         <button id="add-item-btn">Add item</button>
         <label class="import-label">
@@ -34,6 +70,7 @@
             <th>Gifted by</th>
             <th>Origin</th>
             <th>Description</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody id="items-tbody">
