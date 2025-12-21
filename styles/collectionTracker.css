@@ -1,8 +1,18 @@
+/*
+
+#020887
+#334195
+#647AA3
+#95B2B0
+#C6EBBE
+
+*/
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f5;
+  background: #c6ebbe;
 }
 
 header {
@@ -10,8 +20,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: #18181b;
-  color: #f9fafb;
+  background: #95b2b0;
+  color: #020887;
 }
 
 h1 {
@@ -28,7 +38,7 @@ h1 {
 
 button,
 .import-label {
-  background: #4f46e5;
+  background: #020887;
   color: #f9fafb;
   border: none;
   border-radius: 0.25rem;
@@ -189,9 +199,9 @@ th.sortable.desc::after {
 }
 
 th.sortable.asc::after {
-  border-top: 5px solid #4f46e5;
+  border-top: 5px solid #020887;
 }
 
 th.sortable.desc::after {
-  border-bottom: 5px solid #4f46e5;
+  border-bottom: 5px solid #020887;
 }

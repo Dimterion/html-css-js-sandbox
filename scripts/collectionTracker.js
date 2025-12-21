@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sortConfig.key === "origin" ? sortConfig.direction : ""
       }" data-key="origin">Origin</th>
       <th>Description</th>
+      <th>Actions</th>
     `;
 
     document.querySelectorAll(".sortable").forEach((th) => {
