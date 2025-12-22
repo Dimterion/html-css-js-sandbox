@@ -205,3 +205,9 @@ th.sortable.asc::after {
 th.sortable.desc::after {
   border-bottom: 5px solid #020887;
 }
+
+#search-input:focus {
+  outline: none;
+  border-color: #020887;
+  box-shadow: 0 0 0 2px rgba(2, 8, 135, 0.2);
+}

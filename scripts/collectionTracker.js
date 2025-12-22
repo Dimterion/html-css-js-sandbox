@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const exportPdfBtn = document.getElementById("export-pdf-btn");
   const exportCsvBtn = document.getElementById("export-csv-btn");
 
+  function updateItemCount() {
+    itemCount.textContent = `${filteredItems.length} of ${items.length} items`;
+  }
+
   function filterItems() {
     if (!searchTerm.trim()) {
       filteredItems = [...items];
@@ -31,10 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     }
     updateItemCount();
-  }
-
-  function updateItemCount() {
-    itemCount.textContent = `${filteredItems.length} of ${items.length} items`;
   }
 
   function sortItems() {
@@ -264,6 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <th style="border: 1px solid #ccc; padding: 8px;">Gifted by</th>
             <th style="border: 1px solid #ccc; padding: 8px;">Origin</th>
             <th style="border: 1px solid #ccc; padding: 8px;">Description</th>
+            <th style="border: 1px solid #ccc; padding: 8px;">Actions</th>
           </tr>
         </thead>
         <tbody>
