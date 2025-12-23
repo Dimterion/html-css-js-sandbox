@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const element = document.createElement("div");
     element.innerHTML = `
       <h1>Collection (${filteredItems.length} items)</h1>
-      <table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+      <table style="width: 99%; border-collapse: collapse; border: 1px solid #ccc;">
         <thead>
           <tr style="background: #f3f4f6;">
             <th style="border: 1px solid #ccc; padding: 8px;">#</th>
@@ -264,7 +264,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <th style="border: 1px solid #ccc; padding: 8px;">Gifted by</th>
             <th style="border: 1px solid #ccc; padding: 8px;">Origin</th>
             <th style="border: 1px solid #ccc; padding: 8px;">Description</th>
-            <th style="border: 1px solid #ccc; padding: 8px;">Actions</th>
           </tr>
         </thead>
         <tbody>
