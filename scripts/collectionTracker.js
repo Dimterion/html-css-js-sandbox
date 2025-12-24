@@ -42,6 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
       let aVal = a[sortConfig.key] || "";
       let bVal = b[sortConfig.key] || "";
 
+      if (sortConfig.key === "date") {
+        aVal = new Date(aVal).getTime() || 0;
+        bVal = new Date(bVal).getTime() || 0;
+      }
+
       if (sortConfig.key === "number") {
         aVal = parseFloat(aVal) || 0;
         bVal = parseFloat(bVal) || 0;
@@ -224,7 +229,15 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
 
-        items = parsed;
+        items = parsed.map((item) => ({
+          id: crypto.randomUUID(),
+          number: Number(item.number) || "",
+          date: item.date || "",
+          giftedBy: item.giftedBy || "",
+          origin: item.origin || "",
+          description: item.description || "",
+        }));
+
         filterItems();
         sortItems();
         renderItems();
