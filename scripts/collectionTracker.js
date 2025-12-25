@@ -82,24 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function handleSort(e) {
-    const key = e.currentTarget.dataset.key;
-    if (sortConfig.key === key) {
-      sortConfig.direction = sortConfig.direction === "asc" ? "desc" : "asc";
-    } else {
-      sortConfig.key = key;
-      sortConfig.direction = "asc";
-    }
-
-    sortItems();
-    renderItems();
-    renderHeaders();
-  }
-
   function renderItems() {
     tbody.innerHTML = "";
 
-    filteredItems.forEach((item, index) => {
+    filteredItems.forEach((item) => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td>${item.number ?? ""}</td>
@@ -127,12 +113,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function handleSearch() {
-    searchTerm = searchInput.value;
+  function updateView() {
     filterItems();
+    sortItems();
+    renderHeaders();
+    renderItems();
+  }
+
+  function handleSort(e) {
+    const key = e.currentTarget.dataset.key;
+    if (sortConfig.key === key) {
+      sortConfig.direction = sortConfig.direction === "asc" ? "desc" : "asc";
+    } else {
+      sortConfig.key = key;
+      sortConfig.direction = "asc";
+    }
+
     sortItems();
     renderItems();
     renderHeaders();
+  }
+
+  function handleSearch() {
+    searchTerm = searchInput.value;
+    updateView();
     clearSearchBtn.style.display = searchTerm ? "block" : "none";
   }
 
@@ -155,10 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const index = parseInt(e.target.dataset.index);
     if (confirm(`Delete item #${items[index].number || index + 1}?`)) {
       items.splice(index, 1);
-      filterItems();
-      sortItems();
-      renderItems();
-      renderHeaders();
+      updateView();
     }
   }
 
@@ -191,10 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
       items.push(updatedItem);
     }
 
-    filterItems();
-    sortItems();
-    renderItems();
-    renderHeaders();
+    updateView();
     closeModal();
   });
 
@@ -204,10 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
   clearSearchBtn.addEventListener("click", () => {
     searchInput.value = "";
     searchTerm = "";
-    filterItems();
-    sortItems();
-    renderItems();
-    renderHeaders();
+    updateView();
     clearSearchBtn.style.display = "none";
   });
 
@@ -238,10 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
           description: item.description || "",
         }));
 
-        filterItems();
-        sortItems();
-        renderItems();
-        renderHeaders();
+        updateView();
       } catch (err) {
         console.error("Import error:", err);
         alert("Could not import data from this file. Ensure it is valid JSON.");
