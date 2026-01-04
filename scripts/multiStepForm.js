@@ -66,6 +66,18 @@ prev3.addEventListener("click", () => showStep(2));
 
 submit.addEventListener("click", () => {
   alert(`Submitted.\nName: ${formData.name}\nEmail: ${formData.email}`);
+
+  // Reset form after submitting
+  formData.name = "";
+  formData.email = "";
+
+  nameInput.value = "";
+  emailInput.value = "";
+
+  reviewName.textContent = "";
+  reviewEmail.textContent = "";
+
+  showStep(1);
 });
 
 showStep(1);
