@@ -9,6 +9,9 @@ const step1 = document.getElementById("step1");
 const step2 = document.getElementById("step2");
 const step3 = document.getElementById("step3");
 
+const err1 = document.getElementById("err1");
+const err2 = document.getElementById("err2");
+
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 
@@ -37,10 +40,12 @@ next1.addEventListener("click", () => {
   formData.name = nameInput.value.trim();
 
   if (!formData.name) {
-    alert("Enter name.");
+    err1.textContent = "Enter name";
 
     return;
   }
+
+  err1.textContent = "";
 
   showStep(2);
 });
@@ -51,11 +56,12 @@ next2.addEventListener("click", () => {
   formData.email = emailInput.value.trim();
 
   if (!formData.email) {
-    alert("Enter email.");
+    err2.textContent = "Enter email";
 
     return;
   }
 
+  err2.textContent = "";
   reviewName.textContent = formData.name;
   reviewEmail.textContent = formData.email;
 

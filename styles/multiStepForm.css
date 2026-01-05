@@ -16,6 +16,12 @@ header {
   width: 100%;
 }
 
+#err1,
+#err2 {
+  color: red;
+  font-size: 0.75rem;
+}
+
 .hidden {
   display: none;
 }
