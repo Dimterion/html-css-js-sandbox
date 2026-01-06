@@ -1,89 +1,106 @@
-// State
-const formData = {
-  name: "",
-  email: "",
-};
+document.addEventListener("DOMContentLoaded", () => {
+  // State
+  const formData = {
+    name: "",
+    email: "",
+  };
 
-// Elements
-const step1 = document.getElementById("step1");
-const step2 = document.getElementById("step2");
-const step3 = document.getElementById("step3");
+  // Elements
+  const form = document.getElementById("multiStepForm");
 
-const err1 = document.getElementById("err1");
-const err2 = document.getElementById("err2");
+  const step1 = document.getElementById("step1");
+  const step2 = document.getElementById("step2");
+  const step3 = document.getElementById("step3");
 
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
+  const err1 = document.getElementById("err1");
+  const err2 = document.getElementById("err2");
 
-const reviewName = document.getElementById("reviewName");
-const reviewEmail = document.getElementById("reviewEmail");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
 
-const next1 = document.getElementById("next1");
-const next2 = document.getElementById("next2");
-const prev2 = document.getElementById("prev2");
-const prev3 = document.getElementById("prev3");
-const submit = document.getElementById("submit");
+  const reviewName = document.getElementById("reviewName");
+  const reviewEmail = document.getElementById("reviewEmail");
 
-// Show/hide steps
-function showStep(step) {
-  step1.classList.add("hidden");
-  step2.classList.add("hidden");
-  step3.classList.add("hidden");
+  const next1 = document.getElementById("next1");
+  const next2 = document.getElementById("next2");
+  const prev2 = document.getElementById("prev2");
+  const prev3 = document.getElementById("prev3");
 
-  if (step === 1) step1.classList.remove("hidden");
-  if (step === 2) step2.classList.remove("hidden");
-  if (step === 3) step3.classList.remove("hidden");
-}
+  const steps = [step1, step2, step3];
 
-// Actions
-next1.addEventListener("click", () => {
-  formData.name = nameInput.value.trim();
+  // Show/hide steps
+  function showStep(index) {
+    steps.forEach((step, i) => {
+      step.classList.toggle("hidden", i !== index);
+    });
 
-  if (!formData.name) {
-    err1.textContent = "Enter name";
+    const currentStep = steps[index];
+    const firstInput = currentStep.querySelector(
+      "input, button, select, textarea"
+    );
 
-    return;
+    if (firstInput) {
+      firstInput.focus();
+    }
   }
 
-  err1.textContent = "";
+  function validateInput(input, error, text) {
+    const value = input.value.trim();
 
-  showStep(2);
-});
+    if (!value) {
+      error.textContent = text;
 
-prev2.addEventListener("click", () => showStep(1));
+      return null;
+    }
 
-next2.addEventListener("click", () => {
-  formData.email = emailInput.value.trim();
+    error.textContent = "";
 
-  if (!formData.email) {
-    err2.textContent = "Enter email";
-
-    return;
+    return value;
   }
 
-  err2.textContent = "";
-  reviewName.textContent = formData.name;
-  reviewEmail.textContent = formData.email;
+  // Actions
+  next1.addEventListener("click", () => {
+    const name = validateInput(nameInput, err1, "Enter name");
 
-  showStep(3);
+    if (!name) return;
+
+    formData.name = name;
+
+    showStep(1);
+  });
+
+  prev2.addEventListener("click", () => showStep(0));
+
+  next2.addEventListener("click", () => {
+    const email = validateInput(emailInput, err2, "Enter email");
+
+    if (!email) return;
+
+    formData.email = email;
+    reviewName.textContent = formData.name;
+    reviewEmail.textContent = formData.email;
+
+    showStep(2);
+  });
+
+  prev3.addEventListener("click", () => showStep(1));
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    alert(`Submitted.\nName: ${formData.name}\nEmail: ${formData.email}`);
+
+    // Reset form after submitting
+    formData.name = "";
+    formData.email = "";
+
+    form.reset();
+
+    reviewName.textContent = "";
+    reviewEmail.textContent = "";
+
+    showStep(0);
+  });
+
+  showStep(0);
 });
-
-prev3.addEventListener("click", () => showStep(2));
-
-submit.addEventListener("click", () => {
-  alert(`Submitted.\nName: ${formData.name}\nEmail: ${formData.email}`);
-
-  // Reset form after submitting
-  formData.name = "";
-  formData.email = "";
-
-  nameInput.value = "";
-  emailInput.value = "";
-
-  reviewName.textContent = "";
-  reviewEmail.textContent = "";
-
-  showStep(1);
-});
-
-showStep(1);
