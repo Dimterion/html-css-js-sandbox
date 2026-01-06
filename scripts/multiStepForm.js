@@ -23,9 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const next1 = document.getElementById("next1");
   const next2 = document.getElementById("next2");
+  const prev1 = document.getElementById("prev1");
   const prev2 = document.getElementById("prev2");
-  const prev3 = document.getElementById("prev3");
 
+  // Steps
   const steps = [step1, step2, step3];
 
   // Show/hide steps
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Form validation
   function validateInput(input, error, text) {
     const value = input.value.trim();
 
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showStep(1);
   });
 
-  prev2.addEventListener("click", () => showStep(0));
+  prev1.addEventListener("click", () => showStep(0));
 
   next2.addEventListener("click", () => {
     const email = validateInput(emailInput, err2, "Enter email");
@@ -83,10 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showStep(2);
   });
 
-  prev3.addEventListener("click", () => showStep(1));
+  prev2.addEventListener("click", () => showStep(1));
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    if (formData.name === "" || formData.email === "") return;
 
     alert(`Submitted.\nName: ${formData.name}\nEmail: ${formData.email}`);
 

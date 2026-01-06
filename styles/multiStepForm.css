@@ -1,6 +1,6 @@
 body {
-  background: rgba(0, 0, 0, 0.1);
   font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0, 0, 0, 0.1);
   margin: 0;
   text-align: center;
 }
@@ -9,9 +9,30 @@ header {
   margin: 0.5rem;
 }
 
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 400px;
+  max-width: 90vw;
+}
+
 .step {
-  margin: auto;
-  width: 100%;
+  background: white;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+button {
+  margin: 1.5rem 0.25rem 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 #err1,
