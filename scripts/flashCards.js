@@ -83,9 +83,11 @@ function renderAllSets() {
 async function renderContent() {
   try {
     flashcardData = await loadData();
+
     renderAllSets();
   } catch (err) {
     console.error(err);
+
     document.getElementById("app").textContent =
       "Failed to load flashcards data.";
   }
