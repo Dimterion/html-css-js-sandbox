@@ -1,10 +1,8 @@
-let flashcardData = null;
-
 async function loadData() {
   const response = await fetch("../assets/flashCards/flashCards.json");
 
   if (!response.ok) {
-    throw new Error("Failed to load data.");
+    throw new Error("Could not load data.");
   }
 
   return response.json();
@@ -22,6 +20,8 @@ function createSetCard(set) {
 
   return card;
 }
+
+let flashcardData = null;
 
 function renderSetCards(set) {
   const cardsSection = document.createElement("section");
@@ -73,7 +73,7 @@ function renderAllSets() {
   const setsSection = document.createElement("section");
   setsSection.className = "sets-section";
 
-  flashcardData.sets.forEach((set) => {
+  flashcardData.forEach((set) => {
     setsSection.appendChild(createSetCard(set));
   });
 
@@ -89,7 +89,7 @@ async function renderContent() {
     console.error(err);
 
     document.getElementById("app").textContent =
-      "Failed to load flashcards data.";
+      "Could not load flashcards data.";
   }
 }
 

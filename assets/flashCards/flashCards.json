@@ -1,34 +1,32 @@
-{
-  "sets": [
-    {
-      "id": "set1",
-      "title": "Basic HTML",
-      "description": "Core HTML concepts.",
-      "cards": [
-        {
-          "front": "What does HTML stand for?",
-          "back": "HyperText Markup Language"
-        },
-        {
-          "front": "What is the purpose of the <head> element?",
-          "back": "Contains meta information, links, and scripts for the document."
-        }
-      ]
-    },
-    {
-      "id": "set2",
-      "title": "CSS Basics",
-      "description": "Styling fundamentals.",
-      "cards": [
-        {
-          "front": "What is the purpose of CSS?",
-          "back": "To style and layout HTML documents."
-        },
-        {
-          "front": "What does the selector .class do?",
-          "back": "Applies styles to elements with the given class attribute."
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "set1",
+    "title": "Basic HTML",
+    "description": "Core HTML concepts.",
+    "cards": [
+      {
+        "front": "What does HTML stand for?",
+        "back": "HyperText Markup Language"
+      },
+      {
+        "front": "What is the purpose of the head element?",
+        "back": "Contains meta information, links, and scripts for the document."
+      }
+    ]
+  },
+  {
+    "id": "set2",
+    "title": "CSS Basics",
+    "description": "Styling fundamentals.",
+    "cards": [
+      {
+        "front": "What is the purpose of CSS?",
+        "back": "To style and layout HTML documents."
+      },
+      {
+        "front": "What does the selector .class do?",
+        "back": "Applies styles to elements with the given class attribute."
+      }
+    ]
+  }
+]
