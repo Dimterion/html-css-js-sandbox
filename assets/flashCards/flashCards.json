@@ -113,28 +113,47 @@
         ]
       },
       {
-        "front": "",
-        "back": ["", "", ""]
+        "front": "Optional chaining",
+        "back": [
+          "allows to check if a nested property of an object exists;",
+          "uses ?. syntax;",
+          "returns undefined for non-existed properties instead of error;"
+        ]
       },
       {
-        "front": "",
-        "back": ["", "", ""]
+        "front": "Nullish coalescing operator",
+        "back": [
+          "handles default values for null and undefined;",
+          "uses ?? syntax;",
+          "similar to OR operator (||), but only returns the right side if the left side is null or undefined (doesn't take into account any other false value like false or 0);",
+          "can be combined with optional chaining to add default values to object properties;"
+        ]
       },
       {
-        "front": "",
-        "back": ["", "", ""]
+        "front": "Spread operator",
+        "back": [
+          "same syntax as rest operator (…), but different use case;",
+          "adds all array elements to a new array without changing the original array;",
+          "can be used with objects as well;",
+          "helps to avoid mutation of the original array/object (keeps them unchanged);"
+        ]
       },
       {
-        "front": "",
-        "back": ["", "", ""]
+        "front": "Promises",
+        "back": [
+          "objects that represent results of asynchronous operations;",
+          "have three states: pending, fulfilled, rejected;",
+          "are usually used with APIs;",
+          "can be combined with then and catch methods to handle successful or rejected execution;"
+        ]
       },
       {
-        "front": "",
-        "back": ["", "", ""]
-      },
-      {
-        "front": "",
-        "back": ["", "", ""]
+        "front": "Async/await declaration",
+        "back": [
+          "modern way to handle asynchronous operations (simpler than promises);",
+          "async keyword initiates asynchronous function, await - is used to wait for the promise to resolve;",
+          "try…catch statement can be used to handle resolved/rejected promise;"
+        ]
       }
     ]
   }
