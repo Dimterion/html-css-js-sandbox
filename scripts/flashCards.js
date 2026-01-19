@@ -40,7 +40,32 @@ function renderSetCards(set) {
 
     const inner = document.createElement("div");
     inner.className = "card-inner";
-    inner.innerHTML = `<p class="card-face card-front">${card.front}</p><p class="card-face card-back">${card.back}</p>`;
+
+    // Front
+    const frontEl = document.createElement("p");
+    frontEl.className = "card-face card-front";
+    frontEl.textContent = card.front;
+
+    // Back: string → paragraph; array → bullet list
+    const backEl = document.createElement("div");
+    backEl.className = "card-face card-back";
+
+    if (Array.isArray(card.back)) {
+      const list = document.createElement("ul");
+      card.back.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+      backEl.appendChild(list);
+    } else {
+      const p = document.createElement("p");
+      p.textContent = card.back;
+      backEl.appendChild(p);
+    }
+
+    inner.appendChild(frontEl);
+    inner.appendChild(backEl);
 
     inner.addEventListener("click", (e) => {
       e.stopPropagation();

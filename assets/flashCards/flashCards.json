@@ -28,5 +28,81 @@
         "back": "Applies styles to elements with the given class attribute."
       }
     ]
+  },
+  {
+    "id": "set3",
+    "title": "JavaScript Essentials",
+    "description": "JavaScript essential concepts, methods and principles.",
+    "cards": [
+      {
+        "front": "Arrow functions",
+        "back": [
+          "a shorter way of creating functions (convenient for callbacks);",
+          "{} and return can be omitted;",
+          "can not be called before they are created (order has to be followed: create a function - call it after it; regular functions can be called out of order);",
+          "if used with objects, don't create their own this binding (in turn, regular functions refer to the object that they were created in by using this keyword);"
+        ]
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      },
+      {
+        "front": "",
+        "back": ""
+      }
+    ]
   }
 ]
