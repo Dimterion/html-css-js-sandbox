@@ -44,64 +44,97 @@
         ]
       },
       {
-        "front": "",
-        "back": ""
+        "front": "Template literals",
+        "back": [
+          "a way to concatenate strings without the plus (+) operator;",
+          "{} and return can be omitted;",
+          "keep everything within one string created with backticks (`);",
+          "keep everything within one string created with backticks (`);"
+        ]
+      },
+      {
+        "front": "Ternary operator",
+        "back": [
+          "a shorter way to create if-statements;",
+          "starts with a condition followed by a question mark and ends with an expression to execute;",
+          "conditions can be chained to add additional criteria (similar to if-else logic);"
+        ]
+      },
+      {
+        "front": "Short-circuit rendering",
+        "back": [
+          "conditional rendering without the else part;",
+          "uses double ampersand syntax (&&);",
+          "has two parts: if the first one is false, the second one won't run (returns false);"
+        ]
+      },
+      {
+        "front": "Destructuring",
+        "back": [
+          "a simpler way to get items from arrays and assign them to variables;",
+          "a simpler way to get properties from objects and assign them to variables;"
+        ]
+      },
+      {
+        "front": "Rest operator",
+        "back": [
+          "allows to put array elements into a new array;",
+          "combined with destructuring, can be used to get several elements from an array and put the remaining ones into a new array;"
+        ]
+      },
+      {
+        "front": "map() method",
+        "back": [
+          "creates a new array after running its callback function for every element of the initial array;",
+          "keeps the initial array intact (avoids its mutation);"
+        ]
+      },
+      {
+        "front": "filter() method",
+        "back": [
+          "creates a new array from the elements of the initial array that pass the condition implemented by the callback function;",
+          "keeps the initial array intact;",
+          "is often used to remove array elements;"
+        ]
+      },
+      {
+        "front": "reduce() method",
+        "back": [
+          "runs a callback function for the initial value and each array element to get a single value;",
+          "is often used to get the sum of all array elements or concatenating strings;",
+          "keeps the initial array intact;"
+        ]
+      },
+      {
+        "front": "forEach() method",
+        "back": [
+          "runs a callback function for each array element;",
+          "similar to map() method, but does not return a new array;"
+        ]
       },
       {
         "front": "",
-        "back": ""
+        "back": ["", "", ""]
       },
       {
         "front": "",
-        "back": ""
+        "back": ["", "", ""]
       },
       {
         "front": "",
-        "back": ""
+        "back": ["", "", ""]
       },
       {
         "front": "",
-        "back": ""
+        "back": ["", "", ""]
       },
       {
         "front": "",
-        "back": ""
+        "back": ["", "", ""]
       },
       {
         "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
-      },
-      {
-        "front": "",
-        "back": ""
+        "back": ["", "", ""]
       }
     ]
   }
