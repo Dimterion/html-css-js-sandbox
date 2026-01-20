@@ -71,6 +71,10 @@ main {
   perspective: 1000px;
 }
 
+.card:hover {
+  transform: translateY(-1px);
+}
+
 .card-inner {
   position: relative;
   width: 100%;
@@ -124,12 +128,19 @@ main {
   display: flex;
   justify-content: center;
   padding-top: 0;
+  font-weight: bold;
 }
 
 .card-back {
   background: var(--card-back);
   transform: rotateY(180deg);
   font-size: 0.9rem;
+}
+
+.card-back p {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
 .section-title {
