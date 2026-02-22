@@ -47,6 +47,7 @@ select {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .cpu-innerContainer {
@@ -60,6 +61,9 @@ select {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 0, 0.6),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05);
 }
 
 .cpu-upperLeftBlock {
@@ -84,4 +88,22 @@ select {
   background-color: #e5e5d2;
   width: 10rem;
   height: 15rem;
+}
+
+[class^="cpu-"][class$="Block"] {
+  border-radius: 2px;
+  box-shadow:
+    2px 4px 8px rgba(0, 0, 0, 0.5),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  transition: transform 0.2s ease;
+}
+
+[class^="cpu-"][class$="Block"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.6);
 }
