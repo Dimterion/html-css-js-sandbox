@@ -54,16 +54,31 @@ select {
   width: 40rem;
   height: 40rem;
   max-width: 80vw;
-  background-color: #29292c;
   border-radius: 0.5rem;
   padding: 2.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  box-shadow:
-    inset 6px 6px 12px rgba(0, 0, 0, 0.6),
-    inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+  align-items: center;
+
+  /* 1. THE PRESSED EFFECT (Shadows) */
+  box-shadow: 
+    inset 10px 10px 20px rgba(0, 0, 0, 0.8), 
+    inset -5px -5px 15px rgba(255, 255, 255, 0.05);
+
+  /* 2. THE BACKGROUND STACK (Top to Bottom) */
+  background-image: 
+    /* Layer 1: The vignette (makes corners darker) */
+    radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.4) 100%),
+    /* Layer 2: Vertical Grid Lines */
+    linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    /* Layer 3: Horizontal Grid Lines */
+    linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  
+  /* 3. SETTINGS FOR THE GRID */
+  background-size: 100% 100%, 30px 30px, 30px 30px;
+  background-color: #1a1a1d; /* The base "board" color */
 }
 
 .cpu-upperLeftBlock {
@@ -88,6 +103,20 @@ select {
   background-color: #e5e5d2;
   width: 10rem;
   height: 15rem;
+}
+
+.cpu-upperLeftBlock,
+.cpu-upperRightBlock {
+  background-color: #0c85d8;
+  border-left: 2px solid #1098f7;
+  border-top: 2px solid #1098f7;
+}
+
+.cpu-bottomLeftBlock,
+.cpu-bottomRightBlock {
+  background-color: #e5e5d2;
+  border-left: 2px solid #f9f9e8;
+  border-top: 2px solid #f9f9e8;
 }
 
 [class^="cpu-"][class$="Block"] {
