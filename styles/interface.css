@@ -30,6 +30,21 @@ select {
   font: inherit;
 }
 
+header {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0.25rem 2.5rem;
+}
+
 .topLeft-bar {
   background-color: red;
   height: 10px;
@@ -40,7 +55,30 @@ select {
 .bottomCenter-diamond {
   border: 5px solid yellow;
   height: 75px;
-  margin: 50px auto;
   rotate: 45deg;
   width: 75px;
+}
+
+.bottomRight-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.bottomRight-smallDiamond {
+  border: 5px solid gray;
+  height: 50px;
+  margin: 50px auto;
+  rotate: 45deg;
+  width: 50px;
+}
+
+.bottomRight-largeDiamond {
+  border: 5px solid gray;
+  height: 65px;
+  margin: 50px auto;
+  rotate: 45deg;
+  width: 65px;
 }
