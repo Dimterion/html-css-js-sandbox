@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.topLeft-bar {
+  background-color: red;
+  height: 10px;
+  max-width: 30vw;
+  width: 300px;
+}
+
+.bottomCenter-diamond {
+  border: 5px solid yellow;
+  height: 75px;
+  margin: 50px auto;
+  rotate: 45deg;
+  width: 75px;
+}
