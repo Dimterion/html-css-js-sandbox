@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: gray;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0.1rem;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.bars {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.heart_bar {
+  background-color: pink;
+  height: 1rem;
+  width: 5rem;
+}
+
+.eye_bar {
+  background-color: blue;
+  height: 1rem;
+  width: 5rem;
+}
+
+.status {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.stars,
+.icons,
+.ammo {
+  background-color: white;
+  height: 1rem;
+  width: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button {
+  background-color: white;
+  height: 1rem;
+  width: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.map {
+  background-color: white;
+  height: 5rem;
+  width: 5rem;
+}
+
+.stats {
+  background-color: white;
+  height: 5rem;
+  width: 5rem;
+}
