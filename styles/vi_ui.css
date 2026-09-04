@@ -22,18 +22,68 @@ header {
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+  margin: 1rem 2rem;
 }
 
 .heart_bar {
   background-color: pink;
   height: 1rem;
-  width: 5rem;
+  position: relative;
+  width: 10rem;
+}
+
+/* Heart icon */
+.heart_bar::before {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  color: pink;
+  content: "❤";
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+  left: -1.75rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+}
+
+/* Divider */
+.heart_bar::after {
+  background-color: white;
+  border: 0.15rem solid gray;
+  border-bottom: none;
+  border-top: none;
+  content: "";
+  height: 1rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 0.15rem;
 }
 
 .eye_bar {
   background-color: blue;
   height: 1rem;
-  width: 5rem;
+  position: relative;
+  width: 8rem;
+}
+
+/* Eye icon */
+.eye_bar::before {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  color: blue;
+  content: "👁";
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+  left: -1.75rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
 }
 
 .status {
