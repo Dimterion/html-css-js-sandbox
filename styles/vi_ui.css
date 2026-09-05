@@ -92,7 +92,62 @@ header {
   gap: 1rem;
 }
 
-.stars,
+/* .stars {
+  display: flex;
+}
+
+.star {
+  font-size: 2rem;
+}
+
+.star-inactive {
+  color: dimgray;
+}
+
+.star-active {
+  color: black;
+  position: relative;
+}
+
+.star-active::before {
+  color: darkgray;
+  content: "★";
+  font-size: 1.3rem;
+  left: 0.29rem;
+  position: absolute;
+  top: 0.54rem;
+} */
+
+.stars {
+  display: flex;
+}
+
+.star {
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+}
+
+.star-inactive {
+  color: dimgray;
+}
+
+/* Star border */
+.star-active {
+  color: black;
+}
+
+/* Star color */
+.star-active::before {
+  color: darkgray;
+  content: "★";
+  font-size: 0.7em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .icons,
 .ammo {
   background-color: white;
