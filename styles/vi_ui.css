@@ -198,16 +198,124 @@ header {
 }
 
 footer {
+  align-items: center;
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
   justify-content: space-between;
+  margin: 1rem;
 }
 
 .map {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
+  background-color: cadetblue;
+  border: 0.1rem solid white;
+  border-radius: 1.5rem;
+  height: 12rem;
+  position: relative;
+  width: 20rem;
+}
+
+.map::before {
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  content: "N";
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  height: 1.25rem;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.25rem;
+}
+
+.map::after {
+  background-color: pink;
+  border: 0.1rem solid black;
+  border-radius: 50%;
+  content: "";
+  height: 1rem;
+  left: 75%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+}
+
+.distance {
+  color: white;
+  font-family: Arial, sans-serif;
+  paint-order: stroke fill;
+  padding: 1rem;
+  position: absolute;
+  -webkit-text-stroke: 1.5px black;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.road {
+  background-color: darkgray;
+  height: 11.8rem;
+  margin: auto;
+  width: 2.5rem;
+}
+
+.route {
+  background-color: pink;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  bottom: -1rem;
+  height: 8.56rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+}
+
+.location {
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  height: 1.25rem;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  width: 1.25rem;
+}
+
+.location i {
+  color: white;
+  font-size: 0.75rem;
+  padding-right: 1px;
+  padding-top: 1px;
+  transform: rotate(-45deg);
+}
+
+.building-left,
+.building-right {
+  background-color: darkgray;
+  position: absolute;
+}
+
+.building-left {
+  height: 3rem;
+  left: 10%;
+  top: 60%;
+  width: 2rem;
+}
+
+.building-right {
+  height: 4rem;
+  left: 80%;
+  top: 40%;
+  width: 1rem;
 }
 
 .stats {
