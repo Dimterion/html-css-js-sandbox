@@ -187,13 +187,34 @@ header {
 .buttons {
   display: flex;
   flex-flow: row nowrap;
-  gap: 1rem;
+  gap: 10rem;
   justify-content: center;
 }
 
 .button-border {
-  border: 0.25rem solid white;
+  background: conic-gradient(white 0deg 70deg, gray 70deg 360deg);
+  border: 0.1rem solid black;
   border-radius: 50%;
+  display: grid;
+  height: 4rem;
+  place-items: center;
+  position: relative;
+  width: 4rem;
+}
+
+.button-fill {
+  background: gray;
+  border-radius: 50%;
+  inset: 0.5rem;
+  position: absolute;
+  z-index: 0;
+}
+
+.button-inner-border {
+  border: 0.1rem solid black;
+  border-radius: 50%;
+  inset: 0.5rem;
+  position: absolute;
 }
 
 .button {
@@ -202,10 +223,12 @@ header {
   border-radius: 40% 40% 0 0;
   display: flex;
   font-family: Arial, sans-serif;
-  height: 2rem;
+  font-size: 0.75rem;
+  height: 1.5rem;
   justify-content: center;
-  margin: 0.7rem;
-  width: 2rem;
+  position: relative;
+  width: 1.5rem;
+  z-index: 1;
 }
 
 footer {
