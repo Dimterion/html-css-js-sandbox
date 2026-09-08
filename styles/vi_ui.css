@@ -191,14 +191,25 @@ header {
   justify-content: center;
 }
 
+.button-border {
+  border: 0.25rem solid white;
+  border-radius: 50%;
+}
+
 .button {
+  align-items: center;
   background-color: white;
-  height: 1rem;
-  width: 1rem;
+  border-radius: 40% 40% 0 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 2rem;
+  justify-content: center;
+  margin: 0.7rem;
+  width: 2rem;
 }
 
 footer {
-  align-items: center;
+  align-items: end;
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
@@ -319,7 +330,50 @@ footer {
 }
 
 .stats {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
+  align-items: end;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  gap: 1rem;
+}
+
+.lap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  gap: 2rem;
+}
+
+.place {
+  background-color: #333;
+  background-image:
+    linear-gradient(
+      45deg,
+      #555 25%,
+      transparent 25%,
+      transparent 75%,
+      #555 75%,
+      #555
+    ),
+    linear-gradient(
+      45deg,
+      #555 25%,
+      transparent 25%,
+      transparent 75%,
+      #555 75%,
+      #555
+    );
+  background-size: 2rem 2rem;
+  background-position:
+    0 0,
+    1rem 1rem;
+  border-right: 0.25rem solid pink;
+  font-size: 2.1rem;
+  padding: 0.25rem;
+}
+
+.time {
+  font-size: 2.25rem;
 }
