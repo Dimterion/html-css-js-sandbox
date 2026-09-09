@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: gray;
+  background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -28,7 +28,7 @@ header {
 }
 
 .heart_bar {
-  background-color: pink;
+  background-color: #ffc8dd;
   height: 1rem;
   position: relative;
   width: 10rem;
@@ -37,9 +37,9 @@ header {
 /* Heart icon */
 .heart_bar::before {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
-  color: pink;
+  color: #ffc8dd;
   content: "❤";
   display: flex;
   height: 1.5rem;
@@ -54,7 +54,7 @@ header {
 /* Divider */
 .heart_bar::after {
   background-color: white;
-  border: 0.15rem solid gray;
+  border: 0.15rem solid rgba(0, 0, 0, 0.6);
   border-bottom: none;
   border-top: none;
   content: "";
@@ -66,7 +66,7 @@ header {
 }
 
 .eye_bar {
-  background-color: blue;
+  background-color: #b79ced;
   height: 1rem;
   position: relative;
   width: 8rem;
@@ -74,9 +74,9 @@ header {
 
 /* Eye icon */
 .eye_bar::before {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
-  color: blue;
+  color: #b79ced;
   content: "👁";
   display: flex;
   height: 1.5rem;
@@ -127,7 +127,7 @@ header {
 }
 
 .star {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1;
   position: relative;
 }
@@ -143,7 +143,7 @@ header {
 
 /* Star color */
 .star-active::before {
-  color: darkgray;
+  color: #ced3dc;
   content: "★";
   font-size: 0.7em;
   left: 50%;
@@ -154,34 +154,62 @@ header {
 
 .icon {
   align-items: center;
-  background-color: darkred;
+  background-color: #85182a;
+  border: 0.2rem solid #641220;
   border-radius: 50%;
   color: white;
   display: flex;
-  font-size: 0.5rem;
-  height: 1.25rem;
+  font-size: 0.6rem;
+  height: 1.5rem;
   justify-content: center;
   margin: 0 0.2rem;
-  width: 1.25rem;
+  width: 1.5rem;
 }
 
 .ammo {
   align-items: end;
   display: flex;
   flex-flow: column nowrap;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .ammo-count {
   color: white;
   font-family: "Squada One", sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.25rem;
   margin-right: 0.5rem;
   paint-order: stroke fill;
-  -webkit-text-stroke: 2px black;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke: 0.3rem black;
+  -webkit-text-stroke-width: 0.3rem;
   -webkit-text-stroke-color: black;
+}
+
+.ammo-count span {
+  color: #ced3dc;
+  margin-left: 0.25rem;
+}
+
+h1,
+h2 {
+  color: #8338ec;
+  font-family: "Squada One", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  margin: 3rem;
+  text-align: center;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.3rem black;
+  -webkit-text-stroke-width: 0.3rem;
+  -webkit-text-stroke-color: black;
+}
+
+h2 {
+  color: #ff006e;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 .buttons {
@@ -192,7 +220,7 @@ header {
 }
 
 .button-border {
-  background: conic-gradient(white 0deg 70deg, gray 70deg 360deg);
+  background: conic-gradient(white 0deg 70deg, #999 70deg 360deg);
   border: 0.1rem solid black;
   border-radius: 50%;
   display: grid;
@@ -203,9 +231,9 @@ header {
 }
 
 .button-fill {
-  background: gray;
+  background: black;
   border-radius: 50%;
-  inset: 0.5rem;
+  inset: 0.4rem;
   position: absolute;
   z-index: 0;
 }
@@ -223,11 +251,12 @@ header {
   border-radius: 40% 40% 0 0;
   display: flex;
   font-family: Arial, sans-serif;
-  font-size: 0.75rem;
-  height: 1.5rem;
+  height: 2rem;
   justify-content: center;
+  letter-spacing: 0.1rem;
+  padding-top: 0.2rem;
   position: relative;
-  width: 1.5rem;
+  width: 2rem;
   z-index: 1;
 }
 
@@ -241,12 +270,12 @@ footer {
 }
 
 .map {
-  background-color: cadetblue;
+  background-color: #1282a2;
   border: 0.1rem solid white;
   border-radius: 1.5rem;
   height: 12rem;
   position: relative;
-  width: 20rem;
+  width: 22rem;
 }
 
 .map::before {
@@ -268,12 +297,12 @@ footer {
 }
 
 .map::after {
-  background-color: pink;
+  background-color: #fb6f92;
   border: 0.1rem solid black;
   border-radius: 50%;
   content: "";
   height: 1rem;
-  left: 75%;
+  left: 85%;
   position: absolute;
   top: 0;
   transform: translate(-50%, -50%);
@@ -292,19 +321,32 @@ footer {
 }
 
 .road {
-  background-color: darkgray;
+  background-color: #b1a7a6;
+  border-left: 0.75rem solid #778da9;
+  border-right: 0.75rem solid #778da9;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 8px 24px rgba(0, 0, 0, 0.08);
   height: 11.8rem;
   margin: auto;
-  width: 2.5rem;
+  width: 4rem;
 }
 
 .route {
-  background-color: pink;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  background-color: #fb6f92;
+  border-left: 0.1rem solid white;
+  border-right: 0.1rem solid white;
   bottom: -1rem;
   height: 8.56rem;
   left: 50%;
+  /* Blur above the location icon */
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(100% - 2.5rem),
+    transparent 100%
+  );
   position: absolute;
   transform: translate(-50%, -50%);
   width: 1rem;
@@ -312,7 +354,8 @@ footer {
 
 .location {
   align-items: center;
-  background-color: black;
+  background-color: #1b263b;
+  border: 0.1rem solid black;
   border-radius: 50%;
   display: flex;
   height: 1.25rem;
@@ -328,13 +371,17 @@ footer {
   color: white;
   font-size: 0.75rem;
   padding-right: 1px;
-  padding-top: 1px;
+  padding-top: 1.5px;
   transform: rotate(-45deg);
 }
 
 .building-left,
 .building-right {
-  background-color: darkgray;
+  background-color: #b1a7a6;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 8px 24px rgba(0, 0, 0, 0.08);
   position: absolute;
 }
 
@@ -360,6 +407,10 @@ footer {
   font-family: Arial, sans-serif;
   font-weight: bold;
   gap: 1rem;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.1rem black;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: black;
 }
 
 .lap {
@@ -392,7 +443,7 @@ footer {
   background-position:
     0 0,
     1rem 1rem;
-  border-right: 0.25rem solid pink;
+  border-right: 0.25rem solid #fb6f92;
   font-size: 2.1rem;
   padding: 0.25rem;
 }
