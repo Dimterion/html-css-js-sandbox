@@ -47,32 +47,75 @@ body {
   position: fixed;
   right: 16px;
   bottom: 16px;
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+  width: 44px;
+  height: 44px;
 }
 
 #prev-btn,
 #next-btn {
   border: none;
-  background: #333;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 14px;
+  background: transparent;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  padding: 0;
+  font-size: 0;
 }
 
-#prev-btn:hover,
-#next-btn:hover {
-  background: #555;
+#prev-btn::before,
+#next-btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
-#prev-btn:disabled,
-#next-btn:disabled {
-  opacity: 0.4;
+#prev-btn {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#prev-btn::before {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-width: 0 10px 14px 10px;
+  border-color: transparent transparent #333 transparent;
+}
+
+#prev-btn:hover::before {
+  border-bottom-color: #555;
+}
+
+#prev-btn:disabled::before {
+  border-bottom-color: #aaa;
+  cursor: not-allowed;
+}
+
+#next-btn {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#next-btn::before {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-width: 14px 10px 0 10px;
+  border-color: #333 transparent transparent transparent;
+}
+
+#next-btn:hover::before {
+  border-top-color: #555;
+}
+
+#next-btn:disabled::before {
+  border-top-color: #aaa;
   cursor: not-allowed;
 }
