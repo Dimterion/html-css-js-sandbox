@@ -25,6 +25,31 @@ body {
   width: 100%;
 }
 
+#part-header {
+  margin-bottom: 1.5rem;
+}
+
+#part-number {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+#part-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+}
+
+#part-text {
+  font-size: 1rem;
+  color: #333;
+}
+
 #progress-container {
   position: fixed;
   left: 16px;

@@ -14,7 +14,7 @@ async function loadText() {
     render();
   } catch (err) {
     console.error(err);
-    document.getElementById("text-container").textContent =
+    document.getElementById("text-container").innerHTML =
       "Error loading text. Check console for details.";
   }
 }
@@ -22,8 +22,15 @@ async function loadText() {
 function render() {
   if (parts.length === 0) return;
 
-  const textContainer = document.getElementById("text-container");
-  textContainer.textContent = parts[currentIndex];
+  const part = parts[currentIndex];
+
+  const partNumberEl = document.getElementById("part-number");
+  const partTitleEl = document.getElementById("part-title");
+  const partTextEl = document.getElementById("part-text");
+
+  partNumberEl.textContent = `Part ${part.number}`;
+  partTitleEl.textContent = part.title;
+  partTextEl.textContent = part.text;
 
   const progress = ((currentIndex + 1) / parts.length) * 100;
   document.getElementById("progress-bar").style.width = `${progress}%`;
