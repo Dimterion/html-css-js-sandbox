@@ -56,6 +56,10 @@ body {
   margin: 0 auto;
 }
 
+.part-heading {
+  font-size: 1.5rem;
+}
+
 #app-footer {
   position: sticky;
   bottom: 0;

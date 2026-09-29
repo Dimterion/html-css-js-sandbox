@@ -29,7 +29,7 @@ function render() {
   document.getElementById("part-title").textContent = part.title;
 
   // Main text
-  document.getElementById("text-container").textContent = part.text;
+  document.getElementById("text-container").innerHTML = part.text;
 
   // Progress bar
   const progress = ((currentIndex + 1) / parts.length) * 100;
