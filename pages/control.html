@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="../styles/control.css" />
   </head>
   <body>
-    <main id="text-container">
-      <header id="part-header">
-        <h1 id="part-number"></h1>
-        <h2 id="part-title"></h2>
-      </header>
-      <div id="part-text"></div>
-    </main>
+    <header id="app-header">
+      <div id="part-number"></div>
+      <div id="part-title"></div>
+    </header>
 
-    <div id="progress-container">
-      <div id="progress-bar"></div>
-    </div>
+    <main id="text-container"></main>
 
-    <div id="controls">
-      <button id="prev-btn" aria-label="Previous part"></button>
-      <button id="next-btn" aria-label="Next part"></button>
-    </div>
+    <footer id="app-footer">
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <div id="footer-controls">
+        <div id="part-counter">1/3</div>
+
+        <div id="controls">
+          <button id="prev-btn" aria-label="Previous part"></button>
+          <button id="next-btn" aria-label="Next part"></button>
+        </div>
+      </div>
+    </footer>
 
     <script src="../scripts/control.js"></script>
   </body>

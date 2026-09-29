@@ -14,7 +14,7 @@ async function loadText() {
     render();
   } catch (err) {
     console.error(err);
-    document.getElementById("text-container").innerHTML =
+    document.getElementById("text-container").textContent =
       "Error loading text. Check console for details.";
   }
 }
@@ -24,17 +24,22 @@ function render() {
 
   const part = parts[currentIndex];
 
-  const partNumberEl = document.getElementById("part-number");
-  const partTitleEl = document.getElementById("part-title");
-  const partTextEl = document.getElementById("part-text");
+  // Header
+  document.getElementById("part-number").textContent = `Part ${part.number}`;
+  document.getElementById("part-title").textContent = part.title;
 
-  partNumberEl.textContent = `Part ${part.number}`;
-  partTitleEl.textContent = part.title;
-  partTextEl.textContent = part.text;
+  // Main text
+  document.getElementById("text-container").textContent = part.text;
 
+  // Progress bar
   const progress = ((currentIndex + 1) / parts.length) * 100;
   document.getElementById("progress-bar").style.width = `${progress}%`;
 
+  // Part counter (e.g., "1/3")
+  document.getElementById("part-counter").textContent =
+    `${currentIndex + 1}/${parts.length}`;
+
+  // Buttons
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
 
